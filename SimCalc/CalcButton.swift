@@ -16,7 +16,7 @@ class CalcButton:UIButton {
         self.setTitleColor(.label, for: .normal)
         self.layer.cornerRadius = 15
         self.layer.masksToBounds = true
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
     }
     
     required init?(coder: NSCoder) {

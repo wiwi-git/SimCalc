@@ -18,12 +18,13 @@ enum CalcButtonText:String {
     case Equal = "="
     case num0 = "0", num1 = "1", num2 = "2", num3 = "3", num4 = "4", num5 = "5", num6 = "6", num7 = "7", num8 = "8", num9 = "9"
     case Dot = "."
+    case Delete = "⌫"
     case custom = "custom"
 }
 
 struct CalcMode {
    static let basicLines:[[CalcButtonText]] = [
-        [.Parenthesis0, .Parenthesis1, .Persent , .AC],
+        [.Parenthesis0, .Parenthesis1, .AC , .Delete],
         [.num7,.num8,.num9,.Division],
         [.num4,.num5,.num6,.Multiplication],
         [.num1,.num2,.num3,.Minus],
