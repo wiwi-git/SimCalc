@@ -7,9 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    @IBOutlet weak var saveButton:UIButton!
-    @IBOutlet weak var menuButton:UIButton!
+class CalcViewController: UIViewController {
     @IBOutlet weak var textView:UITextView!
     
     @IBOutlet weak var line0:UIStackView!
@@ -19,9 +17,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var line4:UIStackView!
     
     var calc = Calc()
+    var calledVC: MainViewController?
+    
+    var menuVC: UIViewController?
+    var contentVC: UIViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let menuButton = UIBarButtonItem(image: UIImage(named: "sidemenu.png"), style: .plain, target: self, action: #selector(self.menuButtonAaction))
+        self.navigationItem.rightBarButtonItem = menuButton
+        
         
         self.textView.delegate = self
         self.textView.inputView = UIView.init()
@@ -30,8 +36,24 @@ class ViewController: UIViewController {
         self.textView.layer.borderWidth = 1
         self.textView.layer.borderColor = UIColor.label.cgColor
         self.textView.textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         self.calc.lines = CalcMode.basicLines
+        for v in self.line0.arrangedSubviews {
+            v.removeFromSuperview()
+        }
+        for v in self.line1.arrangedSubviews {
+            v.removeFromSuperview()
+        }
+        for v in self.line2.arrangedSubviews {
+            v.removeFromSuperview()
+        }
+        for v in self.line3.arrangedSubviews {
+            v.removeFromSuperview()
+        }
         
         for buttonText in self.calc.lines[0] {
             if let text = self.getText(button: buttonText) {
@@ -85,12 +107,18 @@ class ViewController: UIViewController {
         return "미기능"
     }
     
-    func evaluate(string:String) -> Double {
-        let expr = NSExpression(format: string)
-        if let result = expr.expressionValue(with: nil, context: nil) as? Double {
-            return result
+    func openAlertView(title:String,text:String) {
+        let alt = UIAlertController(title: title, message: text, preferredStyle: .alert)
+        alt.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alt, animated: true, completion: nil)
+    }
+    
+    @objc func menuButtonAaction() {
+        if self.calledVC?.isSideBarShowing == true{
+            self.calledVC?.closeSideBar(nil)
+        } else {
+            self.calledVC?.openSideBar(nil)
         }
-        return 0.0
     }
     
     @objc func calcButtonTouchUpAction(_ sender:UIButton) {
@@ -101,11 +129,13 @@ class ViewController: UIViewController {
                 case .AC: self.textView.text = ""
                 case .Equal:
                     if !self.textView.text.isEmpty, !self.textView.text.contains("=") {
-                        self.textView.text += " = \(self.evaluate(string: self.textView.text))"
+                        if let result = self.calc.evaluate(string: self.textView.text) {
+                            self.textView.text += " = \(result)"
+                        } else {
+                            self.openAlertView(title: "ERROR", text: "올바르지 않은 계산식입니다.")
+                        }
                     } else {
-                        let alt = UIAlertController(title: "ERROR", message: "올바르지 않은 계산식입니다.", preferredStyle: .alert)
-                        alt.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                        self.present(alt, animated: true, completion: nil)
+                        self.openAlertView(title: "ERROR", text: "올바르지 않은 계산식입니다.")
                     }
                 default: self.textView.insertText(sender.title(for: .normal)!)
             }
@@ -116,7 +146,7 @@ class ViewController: UIViewController {
         sender.backgroundColor = .lightGray
     }
 }
-extension ViewController:UITextViewDelegate {
+extension CalcViewController:UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         return textView != self.textView
     }

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum CalcButtonText:String {
+enum CalcButtonText:String,CaseIterable {
     case Parenthesis0 = "("
     case Parenthesis1 = ")"
     case Persent = "%"
@@ -34,5 +34,10 @@ struct CalcMode {
 
 class Calc {
     var lines:[[CalcButtonText]] = []
+    
+    func evaluate(string:String) -> Double? {
+        let expr = NSExpression(format: string)
+        return expr.expressionValue(with: nil, context: nil) as? Double
+    }
     
 }

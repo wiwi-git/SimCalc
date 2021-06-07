@@ -8,24 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		170C8526265D1A8E00222777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170C8525265D1A8E00222777 /* AppDelegate.swift */; };
-		170C852A265D1A8E00222777 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170C8529265D1A8E00222777 /* ViewController.swift */; };
+		170C852A265D1A8E00222777 /* CalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170C8529265D1A8E00222777 /* CalcViewController.swift */; };
 		170C852D265D1A8E00222777 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170C852B265D1A8E00222777 /* Main.storyboard */; };
 		170C852F265D1A8F00222777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 170C852E265D1A8F00222777 /* Assets.xcassets */; };
 		170C8532265D1A8F00222777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170C8530265D1A8F00222777 /* LaunchScreen.storyboard */; };
 		170C853D265D3C0300222777 /* CalcText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170C853C265D3C0300222777 /* CalcText.swift */; };
 		170C8540265D463A00222777 /* CalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170C853F265D463A00222777 /* CalcButton.swift */; };
+		171DB2C3266E00FB00859F37 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171DB2C2266E00FB00859F37 /* MainViewController.swift */; };
+		171DB2C6266E118000859F37 /* sidemenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 171DB2C5266E118000859F37 /* sidemenu.png */; };
+		17E4A5B4265FAA1E0075B132 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */; };
+		17E4A5B726605CF60075B132 /* ChangeButtonPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4A5B626605CF60075B132 /* ChangeButtonPositionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		170C8522265D1A8E00222777 /* SimCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		170C8525265D1A8E00222777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		170C8529265D1A8E00222777 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		170C8529265D1A8E00222777 /* CalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcViewController.swift; sourceTree = "<group>"; };
 		170C852C265D1A8E00222777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		170C852E265D1A8F00222777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		170C8531265D1A8F00222777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		170C8533265D1A8F00222777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		170C853C265D3C0300222777 /* CalcText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcText.swift; sourceTree = "<group>"; };
 		170C853F265D463A00222777 /* CalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButton.swift; sourceTree = "<group>"; };
+		171DB2C2266E00FB00859F37 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		171DB2C5266E118000859F37 /* sidemenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sidemenu.png; sourceTree = "<group>"; };
+		17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		17E4A5B626605CF60075B132 /* ChangeButtonPositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeButtonPositionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +66,18 @@
 		170C8524265D1A8E00222777 /* SimCalc */ = {
 			isa = PBXGroup;
 			children = (
+				171DB2C5266E118000859F37 /* sidemenu.png */,
 				170C8525265D1A8E00222777 /* AppDelegate.swift */,
-				170C8529265D1A8E00222777 /* ViewController.swift */,
+				170C8529265D1A8E00222777 /* CalcViewController.swift */,
 				170C852B265D1A8E00222777 /* Main.storyboard */,
 				170C852E265D1A8F00222777 /* Assets.xcassets */,
 				170C8530265D1A8F00222777 /* LaunchScreen.storyboard */,
 				170C8533265D1A8F00222777 /* Info.plist */,
 				170C853C265D3C0300222777 /* CalcText.swift */,
 				170C853F265D463A00222777 /* CalcButton.swift */,
+				17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */,
+				17E4A5B626605CF60075B132 /* ChangeButtonPositionViewController.swift */,
+				171DB2C2266E00FB00859F37 /* MainViewController.swift */,
 			);
 			path = SimCalc;
 			sourceTree = "<group>";
@@ -128,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				170C8532265D1A8F00222777 /* LaunchScreen.storyboard in Resources */,
+				171DB2C6266E118000859F37 /* sidemenu.png in Resources */,
 				170C852F265D1A8F00222777 /* Assets.xcassets in Resources */,
 				170C852D265D1A8E00222777 /* Main.storyboard in Resources */,
 			);
@@ -140,8 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				171DB2C3266E00FB00859F37 /* MainViewController.swift in Sources */,
 				170C853D265D3C0300222777 /* CalcText.swift in Sources */,
-				170C852A265D1A8E00222777 /* ViewController.swift in Sources */,
+				17E4A5B726605CF60075B132 /* ChangeButtonPositionViewController.swift in Sources */,
+				17E4A5B4265FAA1E0075B132 /* MenuViewController.swift in Sources */,
+				170C852A265D1A8E00222777 /* CalcViewController.swift in Sources */,
 				170C8540265D463A00222777 /* CalcButton.swift in Sources */,
 				170C8526265D1A8E00222777 /* AppDelegate.swift in Sources */,
 			);

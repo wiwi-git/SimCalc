@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rpJ-cU-Max">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,39 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calc View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimCalc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalcViewController" customModule="SimCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xaf-jo-Mbf">
-                                <rect key="frame" x="20" y="0.0" width="335" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbg-m1-LOi">
-                                        <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
-                                        <state key="normal" title="Reuslt-SAVE"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDY-Mq-oee">
-                                        <rect key="frame" x="291" y="0.0" width="44" height="30"/>
-                                        <state key="normal" title="MENU"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="wbg-m1-LOi" firstAttribute="top" secondItem="Xaf-jo-Mbf" secondAttribute="top" id="9G5-qI-dcL"/>
-                                    <constraint firstItem="cDY-Mq-oee" firstAttribute="top" secondItem="Xaf-jo-Mbf" secondAttribute="top" id="DQ1-i1-ac2"/>
-                                    <constraint firstAttribute="height" constant="30" id="DfQ-9G-jyh"/>
-                                    <constraint firstAttribute="bottom" secondItem="cDY-Mq-oee" secondAttribute="bottom" id="XXN-I0-SaI"/>
-                                    <constraint firstAttribute="trailing" secondItem="cDY-Mq-oee" secondAttribute="trailing" id="oTa-l0-ZZa"/>
-                                    <constraint firstItem="wbg-m1-LOi" firstAttribute="leading" secondItem="Xaf-jo-Mbf" secondAttribute="leading" id="ths-bZ-tco"/>
-                                    <constraint firstAttribute="bottom" secondItem="wbg-m1-LOi" secondAttribute="bottom" id="wOP-07-YBh"/>
-                                </constraints>
-                            </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jQ8-bd-nTg">
-                                <rect key="frame" x="20" y="30" width="335" height="90"/>
+                                <rect key="frame" x="20" y="64" width="335" height="90"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="7ph-hb-PFU"/>
@@ -51,25 +28,25 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGg-n1-qCe">
-                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="154" width="375" height="513"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DbD-el-Cm8">
-                                        <rect key="frame" x="20" y="20" width="335" height="507"/>
+                                        <rect key="frame" x="20" y="20" width="335" height="473"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wvD-wb-Bu9">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="89.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="82.5"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="udo-hE-9gA">
-                                                <rect key="frame" x="0.0" y="104.5" width="335" height="89.5"/>
+                                                <rect key="frame" x="0.0" y="97.5" width="335" height="82.5"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mpk-6q-jtD">
-                                                <rect key="frame" x="0.0" y="209" width="335" height="89"/>
+                                                <rect key="frame" x="0.0" y="195" width="335" height="83"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VCA-Fz-ASk">
-                                                <rect key="frame" x="0.0" y="313" width="335" height="89.5"/>
+                                                <rect key="frame" x="0.0" y="293" width="335" height="82.5"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eAH-oh-NO0">
-                                                <rect key="frame" x="0.0" y="417.5" width="335" height="89.5"/>
+                                                <rect key="frame" x="0.0" y="390.5" width="335" height="82.5"/>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -86,30 +63,298 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xaf-jo-Mbf" secondAttribute="trailing" constant="20" id="FIb-7N-TDv"/>
                             <constraint firstItem="FGg-n1-qCe" firstAttribute="top" secondItem="jQ8-bd-nTg" secondAttribute="bottom" id="Jto-34-TMK"/>
-                            <constraint firstItem="jQ8-bd-nTg" firstAttribute="top" secondItem="Xaf-jo-Mbf" secondAttribute="bottom" id="KLB-lM-gGy"/>
-                            <constraint firstItem="Xaf-jo-Mbf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="S4w-98-mFk"/>
-                            <constraint firstItem="Xaf-jo-Mbf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="a2R-UF-hn9"/>
                             <constraint firstItem="FGg-n1-qCe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bxT-Oc-wHi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FGg-n1-qCe" secondAttribute="bottom" id="n9H-ZG-PHi"/>
+                            <constraint firstItem="jQ8-bd-nTg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="sbv-HW-OgH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FGg-n1-qCe" secondAttribute="trailing" id="zKR-FJ-Ghm"/>
                             <constraint firstItem="jQ8-bd-nTg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zZb-So-muZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jQ8-bd-nTg" secondAttribute="trailing" constant="20" id="zgl-cw-bi9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="uQh-zf-OXy"/>
                     <connections>
                         <outlet property="line0" destination="wvD-wb-Bu9" id="6CL-XW-I8a"/>
                         <outlet property="line1" destination="udo-hE-9gA" id="MYQ-C6-xgz"/>
                         <outlet property="line2" destination="mpk-6q-jtD" id="R2E-yS-WIq"/>
                         <outlet property="line3" destination="VCA-Fz-ASk" id="pEm-nA-YiB"/>
                         <outlet property="line4" destination="eAH-oh-NO0" id="UoZ-3g-UHs"/>
-                        <outlet property="menuButton" destination="cDY-Mq-oee" id="IOf-mp-iTV"/>
-                        <outlet property="saveButton" destination="wbg-m1-LOi" id="WUt-bk-BTa"/>
                         <outlet property="textView" destination="jQ8-bd-nTg" id="ShM-CC-bCa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="114"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="wUa-tG-zMH">
+            <objects>
+                <viewController storyboardIdentifier="sb_id_ MenuViewController" id="y41-fz-1WP" customClass="MenuViewController" customModule="SimCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZkG-R1-Mp8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9PZ-WD-5Le">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sU5-5B-Gy7">
+                                        <rect key="frame" x="20" y="20" width="335" height="160"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRT-pf-8bB">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="oXi-A5-cRu"/>
+                                                </constraints>
+                                                <state key="normal" title="버튼 위치 변경"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ype-ap-diW">
+                                                <rect key="frame" x="0.0" y="60" width="335" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="eKK-0Y-d1i"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWB-nv-o66">
+                                                <rect key="frame" x="0.0" y="120" width="335" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="c3l-h5-GTo"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="sU5-5B-Gy7" firstAttribute="top" secondItem="9PZ-WD-5Le" secondAttribute="top" constant="20" id="RMH-Qe-jjJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="sU5-5B-Gy7" secondAttribute="trailing" constant="20" id="SgA-Cb-Arn"/>
+                                    <constraint firstItem="sU5-5B-Gy7" firstAttribute="leading" secondItem="9PZ-WD-5Le" secondAttribute="leading" constant="20" id="egK-5Q-1VQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vz7-Qd-O6p"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vz7-Qd-O6p" firstAttribute="bottom" secondItem="9PZ-WD-5Le" secondAttribute="bottom" id="HmO-eb-Peg"/>
+                            <constraint firstItem="9PZ-WD-5Le" firstAttribute="top" secondItem="Vz7-Qd-O6p" secondAttribute="top" id="JbF-rb-4yd"/>
+                            <constraint firstItem="9PZ-WD-5Le" firstAttribute="trailing" secondItem="Vz7-Qd-O6p" secondAttribute="trailing" id="KCr-4k-I8k"/>
+                            <constraint firstItem="9PZ-WD-5Le" firstAttribute="trailing" secondItem="Vz7-Qd-O6p" secondAttribute="trailing" id="LBX-gw-hla"/>
+                            <constraint firstItem="9PZ-WD-5Le" firstAttribute="bottom" secondItem="Vz7-Qd-O6p" secondAttribute="bottom" id="LI9-L7-dvo"/>
+                            <constraint firstItem="9PZ-WD-5Le" firstAttribute="top" secondItem="Vz7-Qd-O6p" secondAttribute="top" id="WfV-78-HPW"/>
+                            <constraint firstItem="9PZ-WD-5Le" firstAttribute="leading" secondItem="Vz7-Qd-O6p" secondAttribute="leading" id="lR3-lO-awR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chageCalcPositionButton" destination="zRT-pf-8bB" id="NrN-iA-OEA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1o-XY-iNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="113.79310344827587"/>
+        </scene>
+        <!--Change Button Position View Controller-->
+        <scene sceneID="2J1-Nz-YoP">
+            <objects>
+                <viewController storyboardIdentifier="sb_id_ChangeButtonPositionViewController" id="FaT-nM-94v" customClass="ChangeButtonPositionViewController" customModule="SimCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MXR-a9-DTs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRW-ta-P4g">
+                                <rect key="frame" x="20" y="0.0" width="335" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rFq-9e-qco"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" textAlignment="right" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="okq-jH-fmk">
+                                <rect key="frame" x="20" y="30" width="335" height="90"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="798-f9-Mow"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="Ope-I5-wO2"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2xu-OP-I4T">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="sXS-O8-e1b">
+                                        <rect key="frame" x="20" y="20" width="335" height="507"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="r3r-9D-kZF">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="89.5"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L50-8j-8HM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhD-H4-YE4">
+                                                        <rect key="frame" x="87.5" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IT6-S7-C40">
+                                                        <rect key="frame" x="175" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjX-jn-ros">
+                                                        <rect key="frame" x="262.5" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="h96-0e-ui0">
+                                                <rect key="frame" x="0.0" y="104.5" width="335" height="89.5"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKM-TN-JMk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyQ-iS-e7I">
+                                                        <rect key="frame" x="87.5" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phL-4t-Emz">
+                                                        <rect key="frame" x="175" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTf-nJ-igo">
+                                                        <rect key="frame" x="262.5" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="r5z-D8-5Z2">
+                                                <rect key="frame" x="0.0" y="209" width="335" height="89"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9z-OJ-Uef">
+                                                        <rect key="frame" x="0.0" y="0.0" width="72.5" height="89"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgC-XP-gir">
+                                                        <rect key="frame" x="87.5" y="0.0" width="72.5" height="89"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjh-QD-qIK">
+                                                        <rect key="frame" x="175" y="0.0" width="72.5" height="89"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFh-xg-I6c">
+                                                        <rect key="frame" x="262.5" y="0.0" width="72.5" height="89"/>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="z3S-5V-SKf">
+                                                <rect key="frame" x="0.0" y="313" width="335" height="89.5"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-eP-hQo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yn1-d5-vqr">
+                                                        <rect key="frame" x="87.5" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cH-78-R5b">
+                                                        <rect key="frame" x="175" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGO-xT-M7k">
+                                                        <rect key="frame" x="262.5" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bcI-Mw-Qz6">
+                                                <rect key="frame" x="0.0" y="417.5" width="335" height="89.5"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQS-LJ-7ZN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omp-c5-UHn">
+                                                        <rect key="frame" x="87.5" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mf-Bp-6O2">
+                                                        <rect key="frame" x="175" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xim-di-9Ul">
+                                                        <rect key="frame" x="262.5" y="0.0" width="72.5" height="89.5"/>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sXS-O8-e1b" secondAttribute="trailing" constant="20" id="2LR-CB-z79"/>
+                                    <constraint firstAttribute="bottom" secondItem="sXS-O8-e1b" secondAttribute="bottom" constant="20" id="43i-bo-SzU"/>
+                                    <constraint firstItem="sXS-O8-e1b" firstAttribute="top" secondItem="2xu-OP-I4T" secondAttribute="top" constant="20" id="NtF-rv-zeA"/>
+                                    <constraint firstItem="sXS-O8-e1b" firstAttribute="leading" secondItem="2xu-OP-I4T" secondAttribute="leading" constant="20" id="hwo-n2-ZWV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3v0-Vy-hNs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pRW-ta-P4g" firstAttribute="leading" secondItem="3v0-Vy-hNs" secondAttribute="leading" constant="20" id="1Yv-zc-pem"/>
+                            <constraint firstItem="pRW-ta-P4g" firstAttribute="top" secondItem="3v0-Vy-hNs" secondAttribute="top" id="4c0-Gw-hlv"/>
+                            <constraint firstItem="2xu-OP-I4T" firstAttribute="bottom" secondItem="3v0-Vy-hNs" secondAttribute="bottom" id="7a9-jT-OsU"/>
+                            <constraint firstItem="okq-jH-fmk" firstAttribute="top" secondItem="pRW-ta-P4g" secondAttribute="bottom" id="9Yl-5e-eJx"/>
+                            <constraint firstItem="2xu-OP-I4T" firstAttribute="top" secondItem="okq-jH-fmk" secondAttribute="bottom" id="ATj-Al-noy"/>
+                            <constraint firstItem="3v0-Vy-hNs" firstAttribute="trailing" secondItem="okq-jH-fmk" secondAttribute="trailing" constant="20" id="HOx-zc-XKp"/>
+                            <constraint firstItem="2xu-OP-I4T" firstAttribute="top" secondItem="okq-jH-fmk" secondAttribute="bottom" id="K3R-Kb-8n9"/>
+                            <constraint firstItem="3v0-Vy-hNs" firstAttribute="trailing" secondItem="pRW-ta-P4g" secondAttribute="trailing" constant="20" id="Rcl-a2-wxq"/>
+                            <constraint firstItem="2xu-OP-I4T" firstAttribute="trailing" secondItem="3v0-Vy-hNs" secondAttribute="trailing" id="T1p-ce-kba"/>
+                            <constraint firstItem="okq-jH-fmk" firstAttribute="top" secondItem="pRW-ta-P4g" secondAttribute="bottom" id="bSg-Dk-hL5"/>
+                            <constraint firstItem="okq-jH-fmk" firstAttribute="leading" secondItem="3v0-Vy-hNs" secondAttribute="leading" constant="20" id="gq3-gX-oBN"/>
+                            <constraint firstItem="2xu-OP-I4T" firstAttribute="leading" secondItem="3v0-Vy-hNs" secondAttribute="leading" id="lIL-TM-d7v"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="line0PickerView" destination="L50-8j-8HM" collectionClass="NSMutableArray" id="aIJ-As-2ne"/>
+                        <outletCollection property="line0PickerView" destination="EhD-H4-YE4" collectionClass="NSMutableArray" id="ln5-xv-iDa"/>
+                        <outletCollection property="line0PickerView" destination="IT6-S7-C40" collectionClass="NSMutableArray" id="gkF-Mw-H6M"/>
+                        <outletCollection property="line0PickerView" destination="gjX-jn-ros" collectionClass="NSMutableArray" id="fKH-XD-14N"/>
+                        <outletCollection property="line1PickerView" destination="EKM-TN-JMk" collectionClass="NSMutableArray" id="Pqk-Mm-ubQ"/>
+                        <outletCollection property="line1PickerView" destination="dyQ-iS-e7I" collectionClass="NSMutableArray" id="gDI-GK-Z4A"/>
+                        <outletCollection property="line1PickerView" destination="phL-4t-Emz" collectionClass="NSMutableArray" id="bvD-RP-XMv"/>
+                        <outletCollection property="line1PickerView" destination="JTf-nJ-igo" collectionClass="NSMutableArray" id="Id1-gm-CEC"/>
+                        <outletCollection property="line2PickerView" destination="e9z-OJ-Uef" collectionClass="NSMutableArray" id="JJa-VN-jFN"/>
+                        <outletCollection property="line2PickerView" destination="jgC-XP-gir" collectionClass="NSMutableArray" id="p64-Dc-SqY"/>
+                        <outletCollection property="line2PickerView" destination="gjh-QD-qIK" collectionClass="NSMutableArray" id="qlT-jy-2Y5"/>
+                        <outletCollection property="line2PickerView" destination="cFh-xg-I6c" collectionClass="NSMutableArray" id="2A8-ar-kwR"/>
+                        <outletCollection property="line3PickerView" destination="6zi-eP-hQo" collectionClass="NSMutableArray" id="zIb-EY-Zl1"/>
+                        <outletCollection property="line3PickerView" destination="yn1-d5-vqr" collectionClass="NSMutableArray" id="Pah-bc-jEn"/>
+                        <outletCollection property="line3PickerView" destination="3cH-78-R5b" collectionClass="NSMutableArray" id="Oxo-eC-tEQ"/>
+                        <outletCollection property="line3PickerView" destination="HGO-xT-M7k" collectionClass="NSMutableArray" id="6tB-Jv-XAq"/>
+                        <outletCollection property="line4PickerView" destination="WQS-LJ-7ZN" collectionClass="NSMutableArray" id="QS5-Qy-1Dl"/>
+                        <outletCollection property="line4PickerView" destination="omp-c5-UHn" collectionClass="NSMutableArray" id="XeO-n1-Kjv"/>
+                        <outletCollection property="line4PickerView" destination="5mf-Bp-6O2" collectionClass="NSMutableArray" id="bcW-2B-3iC"/>
+                        <outletCollection property="line4PickerView" destination="Xim-di-9Ul" collectionClass="NSMutableArray" id="8qB-RH-XnG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NoO-ia-VgL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2528.8000000000002" y="113.79310344827587"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="lDm-rG-NFg">
+            <objects>
+                <viewController id="rpJ-cU-Max" customClass="MainViewController" customModule="SimCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="huU-me-yRJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SaF-Xo-MCp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zaa-u2-REX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-903" y="103"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YUQ-C3-AwU">
+            <objects>
+                <navigationController storyboardIdentifier="sb_id_calcnavi" automaticallyAdjustsScrollViewInsets="NO" id="vzf-5R-5L3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LqO-cp-lVG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="efC-Ln-Hyk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zpp-iy-rJE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.40000000000001" y="113.79310344827587"/>
         </scene>
