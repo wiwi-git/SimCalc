@@ -13,8 +13,8 @@ protocol MenuViewControllerDelegate {
 class MenuViewController: UIViewController {
     static let sbId = "sb_id_ MenuViewController"
     @IBOutlet weak var chageCalcPositionButton:UIButton!
-    var delegate:MenuViewControllerDelegate?
-    
+    var delegate: MenuViewControllerDelegate?
+    var calldVC: CalcViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .lightGray
@@ -23,6 +23,7 @@ class MenuViewController: UIViewController {
     }
     
     @objc func chageCalcPositionButtionAction() {
+        print("chageCalcPositionButtonAction")
         self.delegate?.openChangeCalc()
     }
     

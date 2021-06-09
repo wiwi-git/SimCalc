@@ -299,6 +299,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="textView" destination="okq-jH-fmk" id="bbN-VH-Nbl"/>
                         <outletCollection property="line0PickerView" destination="L50-8j-8HM" collectionClass="NSMutableArray" id="aIJ-As-2ne"/>
                         <outletCollection property="line0PickerView" destination="EhD-H4-YE4" collectionClass="NSMutableArray" id="ln5-xv-iDa"/>
                         <outletCollection property="line0PickerView" destination="IT6-S7-C40" collectionClass="NSMutableArray" id="gkF-Mw-H6M"/>
@@ -323,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoO-ia-VgL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2528.8000000000002" y="113.79310344827587"/>
+            <point key="canvasLocation" x="2538" y="114"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="lDm-rG-NFg">

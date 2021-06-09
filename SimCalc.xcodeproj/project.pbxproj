@@ -16,6 +16,7 @@
 		170C8540265D463A00222777 /* CalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170C853F265D463A00222777 /* CalcButton.swift */; };
 		171DB2C3266E00FB00859F37 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171DB2C2266E00FB00859F37 /* MainViewController.swift */; };
 		171DB2C6266E118000859F37 /* sidemenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 171DB2C5266E118000859F37 /* sidemenu.png */; };
+		177D59822670481A00612352 /* TryCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 177D59812670481A00612352 /* TryCatch.m */; };
 		17E4A5B4265FAA1E0075B132 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */; };
 		17E4A5B726605CF60075B132 /* ChangeButtonPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4A5B626605CF60075B132 /* ChangeButtonPositionViewController.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,9 @@
 		170C853F265D463A00222777 /* CalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButton.swift; sourceTree = "<group>"; };
 		171DB2C2266E00FB00859F37 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		171DB2C5266E118000859F37 /* sidemenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sidemenu.png; sourceTree = "<group>"; };
+		177D59802670481900612352 /* SimCalc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimCalc-Bridging-Header.h"; sourceTree = "<group>"; };
+		177D59812670481A00612352 /* TryCatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TryCatch.m; sourceTree = "<group>"; };
+		177D59842670483600612352 /* TryCatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TryCatch.h; sourceTree = "<group>"; };
 		17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		17E4A5B626605CF60075B132 /* ChangeButtonPositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeButtonPositionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +82,9 @@
 				17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */,
 				17E4A5B626605CF60075B132 /* ChangeButtonPositionViewController.swift */,
 				171DB2C2266E00FB00859F37 /* MainViewController.swift */,
+				177D59812670481A00612352 /* TryCatch.m */,
+				177D59842670483600612352 /* TryCatch.h */,
+				177D59802670481900612352 /* SimCalc-Bridging-Header.h */,
 			);
 			path = SimCalc;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 				TargetAttributes = {
 					170C8521265D1A8E00222777 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -160,6 +168,7 @@
 				170C852A265D1A8E00222777 /* CalcViewController.swift in Sources */,
 				170C8540265D463A00222777 /* CalcButton.swift in Sources */,
 				170C8526265D1A8E00222777 /* AppDelegate.swift in Sources */,
+				177D59822670481A00612352 /* TryCatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q77G9L4656;
 				INFOPLIST_FILE = SimCalc/Info.plist;
@@ -316,6 +326,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dy.SimCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimCalc/SimCalc-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -326,6 +338,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q77G9L4656;
 				INFOPLIST_FILE = SimCalc/Info.plist;
@@ -336,6 +349,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dy.SimCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimCalc/SimCalc-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

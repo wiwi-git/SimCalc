@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 enum CalcButtonText:String,CaseIterable {
     case Parenthesis0 = "("
     case Parenthesis1 = ")"
@@ -33,11 +34,25 @@ struct CalcMode {
 }
 
 class Calc {
+    static let shared = Calc()
+    private init() {
+        
+    }
     var lines:[[CalcButtonText]] = []
-    
+
     func evaluate(string:String) -> Double? {
-        let expr = NSExpression(format: string)
-        return expr.expressionValue(with: nil, context: nil) as? Double
+        var result:Double? = nil
+        
+        do {
+            try TryCatch.try({
+                let expr = NSExpression(format: string)
+                result = expr.expressionValue(with: nil, context: nil) as? Double
+            })
+        } catch {
+            print(error)
+            return nil
+        }
+        return result
     }
     
 }

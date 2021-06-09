@@ -9,7 +9,7 @@ import UIKit
 class MainViewController: UIViewController {
     var contentVC: UIViewController?
     var sideVC: UIViewController?
-    
+
     var isSideBarShowing = false
     
     let SLIDE_TIME = 0.3
@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         self.setupView()
     }
+    
     func setShadowEffect(shadow: Bool, offset: CGFloat) {
         if shadow {
             self.contentVC?.view.layer.cornerRadius = 5
@@ -34,7 +35,7 @@ class MainViewController: UIViewController {
     func setupView() {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "sb_id_calcnavi") as? UINavigationController {
             self.contentVC = vc
-//            self.contentVC?.view.clipsToBounds = false
+            //            self.contentVC?.view.clipsToBounds = false
             self.addChild(vc)
             
             self.view.addSubview(vc.view)
@@ -44,10 +45,12 @@ class MainViewController: UIViewController {
             calcVC?.calledVC = self
         }
     }
+    
     func getSideView(){
         if self.sideVC == nil {
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: MenuViewController.sbId) {
                 self.sideVC = vc
+                (self.sideVC as? MenuViewController)?.delegate = self
                 self.sideVC?.view.frame = CGRect(x: self.view.frame.width - self.SIDEBAR_WIDTH, y: 0, width: self.SIDEBAR_WIDTH, height: self.view.frame.height)
                 self.addChild(vc)
                 self.view.addSubview(vc.view)
@@ -56,6 +59,7 @@ class MainViewController: UIViewController {
             }
         }
     }
+    
     func openSideBar(_ complete: ( () -> Void)? ) {
         self.getSideView()
         self.setShadowEffect(shadow: true, offset: -2)
@@ -83,6 +87,13 @@ class MainViewController: UIViewController {
                 complete?()
             }
         }
-
+    }
+}
+extension MainViewController: MenuViewControllerDelegate {
+    func openChangeCalc() {
+        self.closeSideBar {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: ChangeButtonPositionViewController.sbId)
+            (self.contentVC as? UINavigationController)?.pushViewController(vc!, animated: true)
+        }
     }
 }
