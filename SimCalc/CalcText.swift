@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CalcButtonText:String,CaseIterable {
+enum CalcButtonText:String,CaseIterable,Codable {
     case Parenthesis0 = "("
     case Parenthesis1 = ")"
     case Persent = "%"
@@ -35,6 +35,7 @@ struct CalcMode {
 
 class Calc {
     static let shared = Calc()
+    static let saveKey = "key_calc_lines"
     private init() {
         
     }
@@ -55,4 +56,22 @@ class Calc {
         return result
     }
     
+    func saveButtons(lines: [[CalcButtonText]]) {
+        print("saveButtons")
+
+        UserDefaults.standard.setValue(lines, forKey: Calc.saveKey)
+        UserDefaults.standard.synchronize()
+        self.lines = lines
+    }
+    
+    func fetchButtons() -> Bool {
+        print("fetchButtons")
+        if let array = UserDefaults.standard.array(forKey: Calc.saveKey) {
+            if let buttons = array as? [[CalcButtonText]] {
+                self.lines = buttons
+                return true
+            }
+        }
+        return false
+    }
 }

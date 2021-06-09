@@ -90,9 +90,16 @@ class MainViewController: UIViewController {
     }
 }
 extension MainViewController: MenuViewControllerDelegate {
+    func openHistory() {
+        self.closeSideBar {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: HistoryViewController.sbId)
+            (self.contentVC as? UINavigationController)?.pushViewController(vc!, animated: true)
+        }
+    }
+    
     func openChangeCalc() {
         self.closeSideBar {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: ChangeButtonPositionViewController.sbId)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: PositionViewController.sbId)
             (self.contentVC as? UINavigationController)?.pushViewController(vc!, animated: true)
         }
     }

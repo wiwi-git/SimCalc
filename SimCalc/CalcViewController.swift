@@ -25,7 +25,6 @@ class CalcViewController: UIViewController {
         
         let menuButton = UIBarButtonItem(image: UIImage(named: "sidemenu.png"), style: .plain, target: self, action: #selector(self.menuButtonAaction))
         self.navigationItem.rightBarButtonItem = menuButton
-//        self.menuVC?.delegate = self
         
         self.textView.delegate = self
         self.textView.inputView = UIView.init()
@@ -39,7 +38,9 @@ class CalcViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.calc.lines = CalcMode.basicLines
+        if !self.calc.fetchButtons() {
+            self.calc.saveButtons(lines: CalcMode.basicLines)
+        }
         
         let stackViewLines:[UIStackView] = [self.line0, self.line1, self.line2, self.line3, self.line4]
         for stackview in stackViewLines {
@@ -120,14 +121,5 @@ class CalcViewController: UIViewController {
 extension CalcViewController:UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         return textView != self.textView
-    }
-}
-extension CalcViewController: MenuViewControllerDelegate {
-    func openChangeCalc() {
-        self.calledVC?.closeSideBar({
-            if let vc = self.storyboard?.instantiateViewController(withIdentifier: ChangeButtonPositionViewController.sbId) {
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
-        })
     }
 }

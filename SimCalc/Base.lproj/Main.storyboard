@@ -112,14 +112,14 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="eKK-0Y-d1i"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="계산 히스토리"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWB-nv-o66">
                                                 <rect key="frame" x="0.0" y="120" width="335" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="c3l-h5-GTo"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="메모?"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -145,17 +145,18 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="chageCalcPositionButton" destination="zRT-pf-8bB" id="NrN-iA-OEA"/>
+                        <outlet property="historyButton" destination="Ype-ap-diW" id="IYU-QB-Ala"/>
+                        <outlet property="positionButton" destination="zRT-pf-8bB" id="NrN-iA-OEA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1o-XY-iNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="113.79310344827587"/>
+            <point key="canvasLocation" x="913" y="850"/>
         </scene>
-        <!--Change Button Position View Controller-->
+        <!--Position View Controller-->
         <scene sceneID="2J1-Nz-YoP">
             <objects>
-                <viewController storyboardIdentifier="sb_id_ChangeButtonPositionViewController" id="FaT-nM-94v" customClass="ChangeButtonPositionViewController" customModule="SimCalc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sb_id_ChangeButtonPositionViewController" id="FaT-nM-94v" customClass="PositionViewController" customModule="SimCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MXR-a9-DTs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -324,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoO-ia-VgL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2538" y="114"/>
+            <point key="canvasLocation" x="1759" y="353"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="lDm-rG-NFg">
@@ -358,6 +359,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zpp-iy-rJE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.40000000000001" y="113.79310344827587"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="ujt-t9-dt7">
+            <objects>
+                <viewController storyboardIdentifier="sb_id_historyviewcontroller" id="pPA-jt-Ira" customClass="HistoryViewController" customModule="SimCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l25-5P-6bX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFK-FK-e2d">
+                                <rect key="frame" x="97" y="297.5" width="181" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aj1-Lu-W7g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EFK-FK-e2d" firstAttribute="centerY" secondItem="l25-5P-6bX" secondAttribute="centerY" id="DEw-cB-pWb"/>
+                            <constraint firstItem="EFK-FK-e2d" firstAttribute="centerX" secondItem="l25-5P-6bX" secondAttribute="centerX" id="Osl-jM-xj5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kL0-5o-J0a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="1079"/>
         </scene>
     </scenes>
     <resources>

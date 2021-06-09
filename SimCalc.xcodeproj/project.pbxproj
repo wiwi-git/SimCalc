@@ -17,8 +17,9 @@
 		171DB2C3266E00FB00859F37 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171DB2C2266E00FB00859F37 /* MainViewController.swift */; };
 		171DB2C6266E118000859F37 /* sidemenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 171DB2C5266E118000859F37 /* sidemenu.png */; };
 		177D59822670481A00612352 /* TryCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 177D59812670481A00612352 /* TryCatch.m */; };
+		177D59872670B1B000612352 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D59862670B1B000612352 /* HistoryViewController.swift */; };
 		17E4A5B4265FAA1E0075B132 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */; };
-		17E4A5B726605CF60075B132 /* ChangeButtonPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4A5B626605CF60075B132 /* ChangeButtonPositionViewController.swift */; };
+		17E4A5B726605CF60075B132 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4A5B626605CF60075B132 /* PositionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +37,9 @@
 		177D59802670481900612352 /* SimCalc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimCalc-Bridging-Header.h"; sourceTree = "<group>"; };
 		177D59812670481A00612352 /* TryCatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TryCatch.m; sourceTree = "<group>"; };
 		177D59842670483600612352 /* TryCatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TryCatch.h; sourceTree = "<group>"; };
+		177D59862670B1B000612352 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		17E4A5B626605CF60075B132 /* ChangeButtonPositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeButtonPositionViewController.swift; sourceTree = "<group>"; };
+		17E4A5B626605CF60075B132 /* PositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +82,12 @@
 				170C853C265D3C0300222777 /* CalcText.swift */,
 				170C853F265D463A00222777 /* CalcButton.swift */,
 				17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */,
-				17E4A5B626605CF60075B132 /* ChangeButtonPositionViewController.swift */,
+				17E4A5B626605CF60075B132 /* PositionViewController.swift */,
 				171DB2C2266E00FB00859F37 /* MainViewController.swift */,
 				177D59812670481A00612352 /* TryCatch.m */,
 				177D59842670483600612352 /* TryCatch.h */,
 				177D59802670481900612352 /* SimCalc-Bridging-Header.h */,
+				177D59862670B1B000612352 /* HistoryViewController.swift */,
 			);
 			path = SimCalc;
 			sourceTree = "<group>";
@@ -163,10 +166,11 @@
 			files = (
 				171DB2C3266E00FB00859F37 /* MainViewController.swift in Sources */,
 				170C853D265D3C0300222777 /* CalcText.swift in Sources */,
-				17E4A5B726605CF60075B132 /* ChangeButtonPositionViewController.swift in Sources */,
+				17E4A5B726605CF60075B132 /* PositionViewController.swift in Sources */,
 				17E4A5B4265FAA1E0075B132 /* MenuViewController.swift in Sources */,
 				170C852A265D1A8E00222777 /* CalcViewController.swift in Sources */,
 				170C8540265D463A00222777 /* CalcButton.swift in Sources */,
+				177D59872670B1B000612352 /* HistoryViewController.swift in Sources */,
 				170C8526265D1A8E00222777 /* AppDelegate.swift in Sources */,
 				177D59822670481A00612352 /* TryCatch.m in Sources */,
 			);
