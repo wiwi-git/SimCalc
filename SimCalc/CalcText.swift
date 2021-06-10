@@ -56,21 +56,32 @@ class Calc {
         return result
     }
     
-    func saveButtons(lines: [[CalcButtonText]]) {
+    func saveButtons(lines: [[CalcButtonText]]) -> Bool {
         print("saveButtons")
-
-        UserDefaults.standard.setValue(lines, forKey: Calc.saveKey)
-        UserDefaults.standard.synchronize()
-        self.lines = lines
+        let encode = JSONEncoder()
+        do {
+            let data = try encode.encode(lines)
+            UserDefaults.standard.setValue(data, forKey: Calc.saveKey)
+            UserDefaults.standard.synchronize()
+            self.lines = lines
+            return true
+        } catch {
+            print(error)
+        }
+        return false
     }
     
     func fetchButtons() -> Bool {
         print("fetchButtons")
-        if let array = UserDefaults.standard.array(forKey: Calc.saveKey) {
-            if let buttons = array as? [[CalcButtonText]] {
-                self.lines = buttons
+        do {
+            if let data = UserDefaults.standard.data(forKey: Calc.saveKey) {
+                let decode = JSONDecoder()
+                let lines = try decode.decode([[CalcButtonText]].self, from: data)
+                self.lines = lines
                 return true
             }
+        } catch {
+            print(error)
         }
         return false
     }

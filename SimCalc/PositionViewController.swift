@@ -116,8 +116,7 @@ class PositionViewController: UIViewController {
             }
         }
         
-        if saveFlag {
-            Calc.shared.saveButtons(lines: linesResult)
+        if saveFlag, Calc.shared.saveButtons(lines: linesResult) {
             let alert = UIAlertController(title: "SUCCESS", message: "저장 완료", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)

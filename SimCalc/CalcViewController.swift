@@ -39,7 +39,7 @@ class CalcViewController: UIViewController {
         super.viewWillAppear(animated)
         
         if !self.calc.fetchButtons() {
-            self.calc.saveButtons(lines: CalcMode.basicLines)
+            _ = self.calc.saveButtons(lines: CalcMode.basicLines)
         }
         
         let stackViewLines:[UIStackView] = [self.line0, self.line1, self.line2, self.line3, self.line4]
