@@ -65,9 +65,9 @@ class HistoryManager: NSObject {
             return false
         }
     }
-    
+    /*
     @discardableResult
-    func savePerson(log: CalcLog) -> Bool {
+    func saveLog(log: CalcLog) -> Bool {
       let request: NSFetchRequest<History> = History.fetchRequest()
       let fetchResult = self.fetch(request: request).first
       if let history = fetchResult {
@@ -83,7 +83,7 @@ class HistoryManager: NSObject {
       } else {
         return self.insertLog(log: log)
       }
-    }
+    }*/
     
     @discardableResult
     func delete(object: NSManagedObject) -> Bool {

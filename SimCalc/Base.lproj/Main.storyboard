@@ -368,20 +368,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFK-FK-e2d">
-                                <rect key="frame" x="97" y="297.5" width="181" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KE9-bC-O4q">
+                                <rect key="frame" x="20" y="20" width="335" height="627"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aj1-Lu-W7g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="EFK-FK-e2d" firstAttribute="centerY" secondItem="l25-5P-6bX" secondAttribute="centerY" id="DEw-cB-pWb"/>
-                            <constraint firstItem="EFK-FK-e2d" firstAttribute="centerX" secondItem="l25-5P-6bX" secondAttribute="centerX" id="Osl-jM-xj5"/>
+                            <constraint firstItem="KE9-bC-O4q" firstAttribute="leading" secondItem="aj1-Lu-W7g" secondAttribute="leading" constant="20" id="1rH-dc-N69"/>
+                            <constraint firstItem="aj1-Lu-W7g" firstAttribute="trailing" secondItem="KE9-bC-O4q" secondAttribute="trailing" constant="20" id="VJJ-i6-5d8"/>
+                            <constraint firstItem="KE9-bC-O4q" firstAttribute="top" secondItem="aj1-Lu-W7g" secondAttribute="top" constant="20" id="nPq-e9-hKw"/>
+                            <constraint firstItem="aj1-Lu-W7g" firstAttribute="bottom" secondItem="KE9-bC-O4q" secondAttribute="bottom" constant="20" id="rUB-VN-Tty"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="KE9-bC-O4q" id="2WN-q2-0hd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kL0-5o-J0a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
