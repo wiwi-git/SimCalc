@@ -16,6 +16,7 @@ class HistoryViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "계산 기록"
         
         let request: NSFetchRequest<History> = History.fetchRequest()
         self.fetchResult = HistoryManager.shared.fetch(request: request)
@@ -34,7 +35,7 @@ extension HistoryViewController: UITableViewDelegate,UITableViewDataSource {
         if let reuseCell = tableView.dequeueReusableCell(withIdentifier: "cell_id_history") {
             cell = reuseCell
         } else {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "cell_id_history")
+            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell_id_history")
         }
         if let item = self.fetchResult?[indexPath.row] {
             cell.detailTextLabel?.text = item.date?.toString()
