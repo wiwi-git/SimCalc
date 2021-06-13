@@ -90,6 +90,7 @@ class MainViewController: UIViewController {
     }
 }
 extension MainViewController: MenuViewControllerDelegate {
+    
     func openHistory() {
         self.closeSideBar {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: HistoryViewController.sbId)
