@@ -89,7 +89,7 @@
         <!--Menu View Controller-->
         <scene sceneID="wUa-tG-zMH">
             <objects>
-                <viewController storyboardIdentifier="sb_id_ MenuViewController" id="y41-fz-1WP" customClass="MenuViewController" customModule="SimCalc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sb_id_menu" id="y41-fz-1WP" customClass="MenuViewController" customModule="SimCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZkG-R1-Mp8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,7 +119,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="c3l-h5-GTo"/>
                                                 </constraints>
-                                                <state key="normal" title="메모?"/>
+                                                <state key="normal" title="저장소"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -147,6 +147,7 @@
                     <connections>
                         <outlet property="historyButton" destination="Ype-ap-diW" id="IYU-QB-Ala"/>
                         <outlet property="positionButton" destination="zRT-pf-8bB" id="NrN-iA-OEA"/>
+                        <outlet property="storageButton" destination="tWB-nv-o66" id="DY4-uQ-lQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1o-XY-iNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -389,6 +390,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kL0-5o-J0a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1758" y="1079"/>
+        </scene>
+        <!--Storage View Controller-->
+        <scene sceneID="m7s-Iq-nx8">
+            <objects>
+                <viewController storyboardIdentifier="sb_id_storage" id="rvK-Fr-Skf" customClass="StorageViewController" customModule="SimCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PTU-Zv-xsA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h06-RX-QAe">
+                                <rect key="frame" x="20" y="20" width="335" height="627"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FOq-Zj-qxy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FOq-Zj-qxy" firstAttribute="bottom" secondItem="h06-RX-QAe" secondAttribute="bottom" constant="20" id="EdC-R0-Zoa"/>
+                            <constraint firstItem="h06-RX-QAe" firstAttribute="leading" secondItem="FOq-Zj-qxy" secondAttribute="leading" constant="20" id="NQK-Kd-33G"/>
+                            <constraint firstItem="FOq-Zj-qxy" firstAttribute="trailing" secondItem="h06-RX-QAe" secondAttribute="trailing" constant="20" id="eVa-E2-89n"/>
+                            <constraint firstItem="h06-RX-QAe" firstAttribute="top" secondItem="FOq-Zj-qxy" secondAttribute="top" constant="20" id="j3j-qr-lYV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableview" destination="h06-RX-QAe" id="xof-v8-olw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Kr-A6-MmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="1764"/>
         </scene>
     </scenes>
     <resources>

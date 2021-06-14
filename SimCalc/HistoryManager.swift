@@ -59,12 +59,31 @@ class HistoryManager: NSObject {
                 try self.context.save()
                 return true
             } catch {
-                print(error.localizedDescription)
+                print(error)
                 return false
             }
-        } else {
-            return false
         }
+        return false
+    }
+    
+    @discardableResult
+    func insertStorage(log:CalcLog, memo:String) -> Bool {
+        if let entity = NSEntityDescription.entity(forEntityName: "Memo", in: self.context) {
+            let managedObject = NSManagedObject(entity: entity, insertInto: self.context)
+            
+            managedObject.setValue(log.date, forKey: "date")
+            managedObject.setValue(log.log, forKey: "log")
+            managedObject.setValue(memo, forKey: "memo")
+            
+            do {
+                try self.context.save()
+                return true
+            } catch {
+                print(error)
+                return false
+            }
+        }
+        return false
     }
     
     @discardableResult

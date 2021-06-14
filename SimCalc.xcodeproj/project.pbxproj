@@ -16,6 +16,9 @@
 		170C8540265D463A00222777 /* CalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170C853F265D463A00222777 /* CalcButton.swift */; };
 		171DB2C3266E00FB00859F37 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171DB2C2266E00FB00859F37 /* MainViewController.swift */; };
 		171DB2C6266E118000859F37 /* sidemenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 171DB2C5266E118000859F37 /* sidemenu.png */; };
+		17764B1E26775FD3008D03BB /* StorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17764B1D26775FD3008D03BB /* StorageViewController.swift */; };
+		17764B21267760B8008D03BB /* StorageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17764B20267760B8008D03BB /* StorageCell.xib */; };
+		17764B2426776602008D03BB /* StorageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17764B2326776602008D03BB /* StorageCell.swift */; };
 		177D59822670481A00612352 /* TryCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 177D59812670481A00612352 /* TryCatch.m */; };
 		177D59872670B1B000612352 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D59862670B1B000612352 /* HistoryViewController.swift */; };
 		177D598C26720D0900612352 /* HistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 177D598A26720D0900612352 /* HistoryModel.xcdatamodeld */; };
@@ -37,6 +40,9 @@
 		170C853F265D463A00222777 /* CalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButton.swift; sourceTree = "<group>"; };
 		171DB2C2266E00FB00859F37 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		171DB2C5266E118000859F37 /* sidemenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sidemenu.png; sourceTree = "<group>"; };
+		17764B1D26775FD3008D03BB /* StorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageViewController.swift; sourceTree = "<group>"; };
+		17764B20267760B8008D03BB /* StorageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StorageCell.xib; sourceTree = "<group>"; };
+		17764B2326776602008D03BB /* StorageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCell.swift; sourceTree = "<group>"; };
 		177D59802670481900612352 /* SimCalc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimCalc-Bridging-Header.h"; sourceTree = "<group>"; };
 		177D59812670481A00612352 /* TryCatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TryCatch.m; sourceTree = "<group>"; };
 		177D59842670483600612352 /* TryCatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TryCatch.h; sourceTree = "<group>"; };
@@ -97,6 +103,9 @@
 				177D598A26720D0900612352 /* HistoryModel.xcdatamodeld */,
 				177D598E267235A300612352 /* HistoryManager.swift */,
 				177D59912673959E00612352 /* Date.swift */,
+				17764B1D26775FD3008D03BB /* StorageViewController.swift */,
+				17764B20267760B8008D03BB /* StorageCell.xib */,
+				17764B2326776602008D03BB /* StorageCell.swift */,
 			);
 			path = SimCalc;
 			sourceTree = "<group>";
@@ -162,6 +171,7 @@
 				170C8532265D1A8F00222777 /* LaunchScreen.storyboard in Resources */,
 				171DB2C6266E118000859F37 /* sidemenu.png in Resources */,
 				170C852F265D1A8F00222777 /* Assets.xcassets in Resources */,
+				17764B21267760B8008D03BB /* StorageCell.xib in Resources */,
 				170C852D265D1A8E00222777 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,9 +190,11 @@
 				17E4A5B4265FAA1E0075B132 /* MenuViewController.swift in Sources */,
 				170C852A265D1A8E00222777 /* CalcViewController.swift in Sources */,
 				170C8540265D463A00222777 /* CalcButton.swift in Sources */,
+				17764B2426776602008D03BB /* StorageCell.swift in Sources */,
 				177D59922673959E00612352 /* Date.swift in Sources */,
 				177D59872670B1B000612352 /* HistoryViewController.swift in Sources */,
 				177D598F267235A300612352 /* HistoryManager.swift in Sources */,
+				17764B1E26775FD3008D03BB /* StorageViewController.swift in Sources */,
 				170C8526265D1A8E00222777 /* AppDelegate.swift in Sources */,
 				177D59822670481A00612352 /* TryCatch.m in Sources */,
 			);

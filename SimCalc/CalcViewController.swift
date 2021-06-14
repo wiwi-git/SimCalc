@@ -51,10 +51,9 @@ class CalcViewController: UIViewController {
         
         for (i,line) in self.calc.lines.enumerated() {
             for buttonText in line {
-                if let text = self.getText(button: buttonText) {
-                    let button = self.buttonSetting(text: text)
-                    stackViewLines[i].addArrangedSubview(button)
-                }
+                let button = self.buttonSetting(text: buttonText.getText())
+                stackViewLines[i].addArrangedSubview(button)
+                
             }
         }
     }
@@ -68,13 +67,6 @@ class CalcViewController: UIViewController {
         return button
     }
     
-    func getText(button:CalcButtonText) -> String? {
-        if button != .custom {
-            return button.rawValue
-        }
-        return "미기능"
-    }
-    
     func openAlertView(title:String,text:String) {
         let alt = UIAlertController(title: title, message: text, preferredStyle: .alert)
         alt.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
@@ -85,7 +77,7 @@ class CalcViewController: UIViewController {
     
     @objc func menuButtonAaction() {
         if self.calledVC?.isSideBarShowing == true{
-            self.calledVC?.closeSideBar(nil)
+            self.calledVC?.closeSideBar(animate: true, nil)
         } else {
             self.calledVC?.openSideBar(nil)
         }
@@ -99,7 +91,6 @@ class CalcViewController: UIViewController {
                     if self.textView.text.count > 0 {
                         self.textView.deleteBackward()
                     }
-                    
                 case .AC: self.textView.text = ""
                 case .Equal:
                     if !self.textView.text.isEmpty, !self.textView.text.contains("=") {

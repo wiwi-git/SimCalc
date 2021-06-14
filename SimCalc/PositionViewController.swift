@@ -39,7 +39,7 @@ class PositionViewController: UIViewController {
         self.textView.layer.borderColor = UIColor.black.cgColor
         self.textView.isEditable = false
         for text in CalcButtonText.allCases {
-            self.calcButtonText.append(self.getText(button: text) ?? "")
+            self.calcButtonText.append(text.getText())
         }
         
         let textLines = Calc.shared.lines
@@ -59,13 +59,6 @@ class PositionViewController: UIViewController {
                 }
             }
         }
-    }
-    
-    func getText(button:CalcButtonText) -> String? {
-        if button != .custom {
-            return button.rawValue
-        }
-        return "미기능"
     }
     
     @objc func resetButtonAction() {
