@@ -105,7 +105,8 @@ class CalcViewController: UIViewController {
                     if !self.textView.text.isEmpty, !self.textView.text.contains("=") {
                         if let result = self.calc.evaluate(string: self.textView.text) {
                             self.textView.text += " = \(result)"
-                            HistoryManager.shared.insertLog(log: CalcLog(date: Date(), log: self.textView.text ?? ""))
+                            let history = HistoryManager.shared
+                            history.insertLog(log: CalcLog(date: Date(), log: self.textView.text ?? ""))
                         } else {
                             self.openAlertView(title: "ERROR", text: "올바르지 않은 계산식입니다.")
                         }

@@ -12,12 +12,26 @@ class MainViewController: UIViewController {
 
     var isSideBarShowing = false
     
-    let SLIDE_TIME = 0.3
+    let SLIDE_TIME: Double = 0.3
     let SIDEBAR_WIDTH: CGFloat = 260
+    let MAX_HISTORY: Int = 50
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+        let history = HistoryManager.shared
+        if let count = history.count(request: History.fetchRequest()) {
+            print("history count : \(count)")
+            if count > self.MAX_HISTORY {
+                let fetchResult = history.fetch(request: History.fetchRequest())
+                let deleteCount = fetchResult.count - self.MAX_HISTORY
+                for i in 0 ..< deleteCount {
+                    history.delete(object: fetchResult[i])
+                }
+            }
+        } else {
+            print("error history")
+        }
     }
     
     func setShadowEffect(shadow: Bool, offset: CGFloat) {

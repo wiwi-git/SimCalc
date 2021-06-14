@@ -18,6 +18,7 @@ class NSCustomPersistentContainer: NSPersistentContainer {
       return URL.storeURL(for: "com.dy.SimCalc", databaseName: "HistoryModel")
     }
 }
+
 class HistoryManager: NSObject {
     static var shared: HistoryManager = HistoryManager()
     var persistentContainer:NSPersistentContainer = {
@@ -65,25 +66,6 @@ class HistoryManager: NSObject {
             return false
         }
     }
-    /*
-    @discardableResult
-    func saveLog(log: CalcLog) -> Bool {
-      let request: NSFetchRequest<History> = History.fetchRequest()
-      let fetchResult = self.fetch(request: request).first
-      if let history = fetchResult {
-        history.date = log.date
-        history.log = log.log
-        do {
-            try self.context.save()
-            return true
-        } catch {
-            print(error.localizedDescription)
-            return false
-        }
-      } else {
-        return self.insertLog(log: log)
-      }
-    }*/
     
     @discardableResult
     func delete(object: NSManagedObject) -> Bool {

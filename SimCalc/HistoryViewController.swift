@@ -44,4 +44,19 @@ extension HistoryViewController: UITableViewDelegate,UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let saveAction = UIContextualAction(style: .normal, title: "보관함으로") { (action, v, complet:@escaping (Bool) -> Void) in
+            
+        }
+        return UISwipeActionsConfiguration(actions: [
+        saveAction])
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .normal, title: "삭제") { (action, v, complet:@escaping (Bool) -> Void) in
+            
+        }
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
 }
