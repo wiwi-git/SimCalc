@@ -24,6 +24,7 @@
 		177D598C26720D0900612352 /* HistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 177D598A26720D0900612352 /* HistoryModel.xcdatamodeld */; };
 		177D598F267235A300612352 /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D598E267235A300612352 /* HistoryManager.swift */; };
 		177D59922673959E00612352 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D59912673959E00612352 /* Date.swift */; };
+		177EE3A92678D28500B37FB4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EE3A82678D28500B37FB4 /* UIColor.swift */; };
 		17E4A5B4265FAA1E0075B132 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */; };
 		17E4A5B726605CF60075B132 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4A5B626605CF60075B132 /* PositionViewController.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		177D598B26720D0900612352 /* HistoryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HistoryModel.xcdatamodel; sourceTree = "<group>"; };
 		177D598E267235A300612352 /* HistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
 		177D59912673959E00612352 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		177EE3A82678D28500B37FB4 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		17E4A5B626605CF60075B132 /* PositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,28 +86,29 @@
 		170C8524265D1A8E00222777 /* SimCalc */ = {
 			isa = PBXGroup;
 			children = (
-				171DB2C5266E118000859F37 /* sidemenu.png */,
-				170C8525265D1A8E00222777 /* AppDelegate.swift */,
-				170C8529265D1A8E00222777 /* CalcViewController.swift */,
-				170C852B265D1A8E00222777 /* Main.storyboard */,
-				170C852E265D1A8F00222777 /* Assets.xcassets */,
-				170C8530265D1A8F00222777 /* LaunchScreen.storyboard */,
 				170C8533265D1A8F00222777 /* Info.plist */,
+				171DB2C5266E118000859F37 /* sidemenu.png */,
+				170C852E265D1A8F00222777 /* Assets.xcassets */,
+				170C8525265D1A8E00222777 /* AppDelegate.swift */,
+				170C8530265D1A8F00222777 /* LaunchScreen.storyboard */,
+				170C852B265D1A8E00222777 /* Main.storyboard */,
+				171DB2C2266E00FB00859F37 /* MainViewController.swift */,
+				170C8529265D1A8E00222777 /* CalcViewController.swift */,
+				17E4A5B626605CF60075B132 /* PositionViewController.swift */,
+				17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */,
+				17764B1D26775FD3008D03BB /* StorageViewController.swift */,
+				177D59862670B1B000612352 /* HistoryViewController.swift */,
+				177D598E267235A300612352 /* HistoryManager.swift */,
+				17764B20267760B8008D03BB /* StorageCell.xib */,
+				17764B2326776602008D03BB /* StorageCell.swift */,
 				170C853C265D3C0300222777 /* CalcText.swift */,
 				170C853F265D463A00222777 /* CalcButton.swift */,
-				17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */,
-				17E4A5B626605CF60075B132 /* PositionViewController.swift */,
-				171DB2C2266E00FB00859F37 /* MainViewController.swift */,
 				177D59812670481A00612352 /* TryCatch.m */,
 				177D59842670483600612352 /* TryCatch.h */,
 				177D59802670481900612352 /* SimCalc-Bridging-Header.h */,
-				177D59862670B1B000612352 /* HistoryViewController.swift */,
 				177D598A26720D0900612352 /* HistoryModel.xcdatamodeld */,
-				177D598E267235A300612352 /* HistoryManager.swift */,
 				177D59912673959E00612352 /* Date.swift */,
-				17764B1D26775FD3008D03BB /* StorageViewController.swift */,
-				17764B20267760B8008D03BB /* StorageCell.xib */,
-				17764B2326776602008D03BB /* StorageCell.swift */,
+				177EE3A82678D28500B37FB4 /* UIColor.swift */,
 			);
 			path = SimCalc;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				170C853D265D3C0300222777 /* CalcText.swift in Sources */,
 				177D598C26720D0900612352 /* HistoryModel.xcdatamodeld in Sources */,
 				17E4A5B726605CF60075B132 /* PositionViewController.swift in Sources */,
+				177EE3A92678D28500B37FB4 /* UIColor.swift in Sources */,
 				17E4A5B4265FAA1E0075B132 /* MenuViewController.swift in Sources */,
 				170C852A265D1A8E00222777 /* CalcViewController.swift in Sources */,
 				170C8540265D463A00222777 /* CalcButton.swift in Sources */,

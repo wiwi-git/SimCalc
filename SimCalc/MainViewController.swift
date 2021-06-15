@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+        
         let history = HistoryManager.shared
         if let count = history.count(request: History.fetchRequest()) {
             print("history count : \(count)")
@@ -49,6 +50,9 @@ class MainViewController: UIViewController {
     func setupView() {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "sb_id_calcnavi") as? UINavigationController {
             self.contentVC = vc
+            let color = UIColor(hex: "#00003dff")
+            self.contentVC?.view.backgroundColor = color
+            print(color)
             //            self.contentVC?.view.clipsToBounds = false
             self.addChild(vc)
             

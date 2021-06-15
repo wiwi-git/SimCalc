@@ -51,7 +51,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="DbD-el-Cm8" firstAttribute="leading" secondItem="FGg-n1-qCe" secondAttribute="leading" constant="20" id="5o0-wC-0GA"/>
                                     <constraint firstAttribute="trailing" secondItem="DbD-el-Cm8" secondAttribute="trailing" constant="20" id="amR-zr-wvK"/>
@@ -61,7 +60,6 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="FGg-n1-qCe" firstAttribute="top" secondItem="jQ8-bd-nTg" secondAttribute="bottom" id="Jto-34-TMK"/>
                             <constraint firstItem="FGg-n1-qCe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bxT-Oc-wHi"/>
