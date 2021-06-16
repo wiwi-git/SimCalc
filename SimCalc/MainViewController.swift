@@ -50,6 +50,7 @@ class MainViewController: UIViewController {
     func setupView() {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "sb_id_calcnavi") as? UINavigationController {
             self.contentVC = vc
+            self.contentVC?.view.layer.masksToBounds = false
             self.addChild(vc)
             
             self.view.addSubview(vc.view)

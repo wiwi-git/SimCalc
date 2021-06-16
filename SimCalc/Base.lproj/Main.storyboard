@@ -142,6 +142,7 @@
                     </view>
                     <connections>
                         <outlet property="historyButton" destination="Ype-ap-diW" id="IYU-QB-Ala"/>
+                        <outlet property="menuView" destination="9PZ-WD-5Le" id="LEQ-HE-CyC"/>
                         <outlet property="positionButton" destination="zRT-pf-8bB" id="NrN-iA-OEA"/>
                         <outlet property="storageButton" destination="tWB-nv-o66" id="DY4-uQ-lQm"/>
                     </connections>
@@ -270,7 +271,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="sXS-O8-e1b" secondAttribute="trailing" constant="20" id="2LR-CB-z79"/>
                                     <constraint firstAttribute="bottom" secondItem="sXS-O8-e1b" secondAttribute="bottom" constant="20" id="43i-bo-SzU"/>
@@ -280,7 +280,6 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3v0-Vy-hNs"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pRW-ta-P4g" firstAttribute="leading" secondItem="3v0-Vy-hNs" secondAttribute="leading" constant="20" id="1Yv-zc-pem"/>
                             <constraint firstItem="pRW-ta-P4g" firstAttribute="top" secondItem="3v0-Vy-hNs" secondAttribute="top" id="4c0-Gw-hlv"/>
@@ -371,7 +370,6 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aj1-Lu-W7g"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KE9-bC-O4q" firstAttribute="leading" secondItem="aj1-Lu-W7g" secondAttribute="leading" constant="20" id="1rH-dc-N69"/>
                             <constraint firstItem="aj1-Lu-W7g" firstAttribute="trailing" secondItem="KE9-bC-O4q" secondAttribute="trailing" constant="20" id="VJJ-i6-5d8"/>
@@ -401,7 +399,6 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FOq-Zj-qxy"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="FOq-Zj-qxy" firstAttribute="bottom" secondItem="h06-RX-QAe" secondAttribute="bottom" constant="20" id="EdC-R0-Zoa"/>
                             <constraint firstItem="h06-RX-QAe" firstAttribute="leading" secondItem="FOq-Zj-qxy" secondAttribute="leading" constant="20" id="NQK-Kd-33G"/>

@@ -7,16 +7,17 @@
 import UIKit
 
 extension UIColor {
-    static var buttonGreen:UIColor {
+    static var backgroundGreen:UIColor {
         UIColor(hex: "#58a982ff")!
     }
     static var selectedButtonGreen:UIColor {
         UIColor(hex: "#015401ff")!
     }
+    /*
     static var backgroundGreen:UIColor {
         UIColor(hex: "#58c782ff")!
     }
-    
+    */
     public convenience init?(hex: String) {
         let r, g, b, a: CGFloat
 

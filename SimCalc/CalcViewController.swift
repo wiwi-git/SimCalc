@@ -26,6 +26,7 @@ class CalcViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let menuButton = UIBarButtonItem(image: UIImage(named: "sidemenu.png"), style: .plain, target: self, action: #selector(self.menuButtonAaction))
+        menuButton.tintColor = .white
         self.navigationItem.rightBarButtonItem = menuButton
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -33,14 +34,15 @@ class CalcViewController: UIViewController {
         self.textView.delegate = self
         self.textView.inputView = UIView.init()
         self.textView.textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-        self.textView.backgroundColor = .buttonGreen
-        
+        self.textView.backgroundColor = .backgroundGreen
+
         self.textView.layer.cornerRadius = 15
         self.textView.layer.masksToBounds = false
-        self.textView.layer.borderWidth = 0
-        self.textView.layer.shadowOffset = .zero
-        self.textView.layer.shadowOpacity = 1
-        self.textView.layer.shadowRadius = 15
+        self.textView.layer.borderWidth = 1
+        self.textView.layer.borderColor = UIColor.white.cgColor
+//        self.textView.layer.shadowOffset = .zero
+//        self.textView.layer.shadowOpacity = 1
+//        self.textView.layer.shadowRadius = 15
         
         let buttonWidth = (self.line0.bounds.width - ( 3 * 15 )) / 4
         self.buttonSize = CGSize(width: buttonWidth, height: buttonWidth)
@@ -76,10 +78,11 @@ class CalcViewController: UIViewController {
         button.addTarget(self, action: #selector(self.calcButtonTouchDownAction(_:)), for: .touchDown)
         
         button.layer.cornerRadius = frame.width/2
-        button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.shadowOffset = .zero
-        button.layer.shadowRadius = frame.width/2
-        button.layer.shadowOpacity = 1
+//        button.layer.shadowColor = UIColor.black.cgColor
+//        button.layer.shadowOffset = .zero
+//        button.layer.shadowRadius = frame.width/2
+//        button.layer.shadowOpacity = 1
+        
         button.translatesAutoresizingMaskIntoConstraints = false
         button.heightAnchor.constraint(equalToConstant: frame.height).isActive = true
         return button
@@ -100,7 +103,7 @@ class CalcViewController: UIViewController {
     }
     
     @objc func calcButtonTouchUpAction(_ sender:UIButton) {
-        sender.backgroundColor = .buttonGreen
+        sender.backgroundColor = .backgroundGreen
         if let text = CalcButtonText(rawValue: sender.title(for: .normal)!) {
             switch text {
                 case .Delete:

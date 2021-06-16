@@ -10,11 +10,14 @@ import UIKit
 class CalcButton:UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.layer.borderWidth = 0
-        self.layer.borderColor = UIColor.label.cgColor
+//        self.layer.borderWidth = 0
+//        self.layer.borderColor = UIColor.label.cgColor
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.white.cgColor
+        
         self.layer.masksToBounds = false
         
-        self.backgroundColor = UIColor.buttonGreen
+        self.backgroundColor = UIColor.backgroundGreen
         self.setTitleColor(.white, for: .normal)
         self.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
     }
