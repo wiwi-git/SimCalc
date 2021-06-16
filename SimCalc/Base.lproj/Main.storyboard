@@ -30,23 +30,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGg-n1-qCe">
                                 <rect key="frame" x="0.0" y="154" width="375" height="513"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DbD-el-Cm8">
-                                        <rect key="frame" x="20" y="20" width="335" height="473"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DbD-el-Cm8">
+                                        <rect key="frame" x="20" y="20" width="335" height="453"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wvD-wb-Bu9">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="82.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wvD-wb-Bu9">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="84"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="udo-hE-9gA">
-                                                <rect key="frame" x="0.0" y="97.5" width="335" height="82.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="udo-hE-9gA">
+                                                <rect key="frame" x="0.0" y="92" width="335" height="84.5"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mpk-6q-jtD">
-                                                <rect key="frame" x="0.0" y="195" width="335" height="83"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mpk-6q-jtD">
+                                                <rect key="frame" x="0.0" y="184.5" width="335" height="84"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VCA-Fz-ASk">
-                                                <rect key="frame" x="0.0" y="293" width="335" height="82.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VCA-Fz-ASk">
+                                                <rect key="frame" x="0.0" y="276.5" width="335" height="84.5"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eAH-oh-NO0">
-                                                <rect key="frame" x="0.0" y="390.5" width="335" height="82.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eAH-oh-NO0">
+                                                <rect key="frame" x="0.0" y="369" width="335" height="84"/>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -55,7 +55,7 @@
                                     <constraint firstItem="DbD-el-Cm8" firstAttribute="leading" secondItem="FGg-n1-qCe" secondAttribute="leading" constant="20" id="5o0-wC-0GA"/>
                                     <constraint firstAttribute="trailing" secondItem="DbD-el-Cm8" secondAttribute="trailing" constant="20" id="amR-zr-wvK"/>
                                     <constraint firstItem="DbD-el-Cm8" firstAttribute="top" secondItem="FGg-n1-qCe" secondAttribute="top" constant="20" id="eii-eO-Irw"/>
-                                    <constraint firstAttribute="bottom" secondItem="DbD-el-Cm8" secondAttribute="bottom" constant="20" id="tic-op-kcj"/>
+                                    <constraint firstAttribute="bottom" secondItem="DbD-el-Cm8" secondAttribute="bottom" constant="40" id="tic-op-kcj"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -92,11 +92,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9PZ-WD-5Le">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9PZ-WD-5Le" userLabel="menu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sU5-5B-Gy7">
-                                        <rect key="frame" x="20" y="20" width="335" height="160"/>
+                                        <rect key="frame" x="20" y="50" width="335" height="160"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRT-pf-8bB">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
@@ -122,9 +122,8 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80493679425574294" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="sU5-5B-Gy7" firstAttribute="top" secondItem="9PZ-WD-5Le" secondAttribute="top" constant="20" id="RMH-Qe-jjJ"/>
                                     <constraint firstAttribute="trailing" secondItem="sU5-5B-Gy7" secondAttribute="trailing" constant="20" id="SgA-Cb-Arn"/>
                                     <constraint firstItem="sU5-5B-Gy7" firstAttribute="leading" secondItem="9PZ-WD-5Le" secondAttribute="leading" constant="20" id="egK-5Q-1VQ"/>
                                 </constraints>
@@ -133,13 +132,12 @@
                         <viewLayoutGuide key="safeArea" id="Vz7-Qd-O6p"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Vz7-Qd-O6p" firstAttribute="bottom" secondItem="9PZ-WD-5Le" secondAttribute="bottom" id="HmO-eb-Peg"/>
-                            <constraint firstItem="9PZ-WD-5Le" firstAttribute="top" secondItem="Vz7-Qd-O6p" secondAttribute="top" id="JbF-rb-4yd"/>
                             <constraint firstItem="9PZ-WD-5Le" firstAttribute="trailing" secondItem="Vz7-Qd-O6p" secondAttribute="trailing" id="KCr-4k-I8k"/>
                             <constraint firstItem="9PZ-WD-5Le" firstAttribute="trailing" secondItem="Vz7-Qd-O6p" secondAttribute="trailing" id="LBX-gw-hla"/>
-                            <constraint firstItem="9PZ-WD-5Le" firstAttribute="bottom" secondItem="Vz7-Qd-O6p" secondAttribute="bottom" id="LI9-L7-dvo"/>
-                            <constraint firstItem="9PZ-WD-5Le" firstAttribute="top" secondItem="Vz7-Qd-O6p" secondAttribute="top" id="WfV-78-HPW"/>
+                            <constraint firstItem="9PZ-WD-5Le" firstAttribute="bottom" secondItem="ZkG-R1-Mp8" secondAttribute="bottom" id="LI9-L7-dvo"/>
+                            <constraint firstItem="sU5-5B-Gy7" firstAttribute="top" secondItem="Vz7-Qd-O6p" secondAttribute="top" constant="50" id="MWX-w1-uRV"/>
                             <constraint firstItem="9PZ-WD-5Le" firstAttribute="leading" secondItem="Vz7-Qd-O6p" secondAttribute="leading" id="lR3-lO-awR"/>
+                            <constraint firstItem="9PZ-WD-5Le" firstAttribute="top" secondItem="ZkG-R1-Mp8" secondAttribute="top" id="svK-07-lCX"/>
                         </constraints>
                     </view>
                     <connections>

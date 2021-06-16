@@ -19,19 +19,31 @@ class CalcViewController: UIViewController {
     var calc = Calc.shared
     var calledVC: MainViewController?
     var menuVC: MenuViewController?
+    var buttonSize:CGSize = .zero
+    
+    lazy var stackViewLines:[UIStackView] = [self.line0, self.line1, self.line2, self.line3, self.line4]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let menuButton = UIBarButtonItem(image: UIImage(named: "sidemenu.png"), style: .plain, target: self, action: #selector(self.menuButtonAaction))
         self.navigationItem.rightBarButtonItem = menuButton
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         
         self.textView.delegate = self
         self.textView.inputView = UIView.init()
-        self.textView.layer.cornerRadius = 15
-        self.textView.layer.masksToBounds = true
-        self.textView.layer.borderWidth = 1
-        self.textView.layer.borderColor = UIColor.label.cgColor
         self.textView.textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        self.textView.backgroundColor = .buttonGreen
+        
+        self.textView.layer.cornerRadius = 15
+        self.textView.layer.masksToBounds = false
+        self.textView.layer.borderWidth = 0
+        self.textView.layer.shadowOffset = .zero
+        self.textView.layer.shadowOpacity = 1
+        self.textView.layer.shadowRadius = 15
+        
+        let buttonWidth = (self.line0.bounds.width - ( 3 * 15 )) / 4
+        self.buttonSize = CGSize(width: buttonWidth, height: buttonWidth)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,7 +53,6 @@ class CalcViewController: UIViewController {
             _ = self.calc.saveButtons(lines: CalcMode.basicLines)
         }
         
-        let stackViewLines:[UIStackView] = [self.line0, self.line1, self.line2, self.line3, self.line4]
         for stackview in stackViewLines {
             for subView in stackview.arrangedSubviews {
                 subView.removeFromSuperview()
@@ -58,11 +69,19 @@ class CalcViewController: UIViewController {
     }
     
     func buttonSetting(text:String) -> CalcButton {
-        let frame = CGRect(origin: .zero, size: CGSize(width: 80, height: 80))
+        let frame = CGRect(origin: .zero, size: self.buttonSize)
         let button = CalcButton(frame: frame)
         button.setTitle(text, for: .normal)
         button.addTarget(self, action: #selector(self.calcButtonTouchUpAction(_:)), for: .touchUpInside)
         button.addTarget(self, action: #selector(self.calcButtonTouchDownAction(_:)), for: .touchDown)
+        
+        button.layer.cornerRadius = frame.width/2
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = .zero
+        button.layer.shadowRadius = frame.width/2
+        button.layer.shadowOpacity = 1
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.heightAnchor.constraint(equalToConstant: frame.height).isActive = true
         return button
     }
     
@@ -71,8 +90,6 @@ class CalcViewController: UIViewController {
         alt.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         self.present(alt, animated: true, completion: nil)
     }
-    
-    
     
     @objc func menuButtonAaction() {
         if self.calledVC?.isSideBarShowing == true{
@@ -83,7 +100,7 @@ class CalcViewController: UIViewController {
     }
     
     @objc func calcButtonTouchUpAction(_ sender:UIButton) {
-        sender.backgroundColor = .systemBackground
+        sender.backgroundColor = .buttonGreen
         if let text = CalcButtonText(rawValue: sender.title(for: .normal)!) {
             switch text {
                 case .Delete:
@@ -107,7 +124,7 @@ class CalcViewController: UIViewController {
     }
     
     @objc func calcButtonTouchDownAction(_ sender:UIButton) {
-        sender.backgroundColor = .lightGray
+        sender.backgroundColor = .selectedButtonGreen
     }
 }
 extension CalcViewController:UITextViewDelegate {

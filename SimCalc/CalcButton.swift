@@ -12,18 +12,11 @@ class CalcButton:UIButton {
         super.init(frame: frame)
         self.layer.borderWidth = 0
         self.layer.borderColor = UIColor.label.cgColor
-        self.backgroundColor = .systemBackground
+        self.layer.masksToBounds = false
+        
+        self.backgroundColor = UIColor.buttonGreen
         self.setTitleColor(.white, for: .normal)
-        
-        self.layer.cornerRadius = frame.width/2
-        self.layer.masksToBounds = true
-        self.backgroundColor = UIColor(hex: "#000052ff")
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOffset = .zero
-        self.layer.shadowRadius = frame.width/2
-        self.layer.shadowOpacity = 1.0
         self.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
-        
     }
     
     required init?(coder: NSCoder) {

@@ -28,6 +28,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .backgroundGreen
         self.buttonSetting(self.positionButton, tag: .position)
         self.buttonSetting(self.historyButton, tag: .history)
         self.buttonSetting(self.storageButton, tag: .storage)
