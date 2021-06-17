@@ -41,7 +41,7 @@
 		170C853F265D463A00222777 /* CalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButton.swift; sourceTree = "<group>"; };
 		171DB2C2266E00FB00859F37 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		171DB2C5266E118000859F37 /* sidemenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sidemenu.png; sourceTree = "<group>"; };
-		17764B1D26775FD3008D03BB /* StorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageViewController.swift; sourceTree = "<group>"; };
+		17764B1D26775FD3008D03BB /* StorageViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = StorageViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		17764B20267760B8008D03BB /* StorageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StorageCell.xib; sourceTree = "<group>"; };
 		17764B2326776602008D03BB /* StorageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCell.swift; sourceTree = "<group>"; };
 		177D59802670481900612352 /* SimCalc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimCalc-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -96,9 +96,9 @@
 				170C8529265D1A8E00222777 /* CalcViewController.swift */,
 				17E4A5B626605CF60075B132 /* PositionViewController.swift */,
 				17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */,
-				17764B1D26775FD3008D03BB /* StorageViewController.swift */,
 				177D59862670B1B000612352 /* HistoryViewController.swift */,
 				177D598E267235A300612352 /* HistoryManager.swift */,
+				17764B1D26775FD3008D03BB /* StorageViewController.swift */,
 				17764B20267760B8008D03BB /* StorageCell.xib */,
 				17764B2326776602008D03BB /* StorageCell.swift */,
 				170C853C265D3C0300222777 /* CalcText.swift */,
