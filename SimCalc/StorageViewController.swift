@@ -16,9 +16,15 @@ class StorageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let bar = self.navigationController?.navigationBar
+        bar?.tintColor = .white
+        bar?.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        self.navigationItem.title = "저장소"
+        
         self.tableview.delegate = self
         self.tableview.dataSource = self
         self.tableview.register(UINib(nibName: "StorageCell", bundle: nil), forCellReuseIdentifier: StorageCell.reuseId)
+        self.tableview.backgroundColor = .clear
         self.fetchResult = HistoryManager.shared.fetch(request: Memo.fetchRequest())
         
     }

@@ -29,15 +29,20 @@ class PositionViewController: UIViewController {
         super.viewDidLoad()
         
         let resetButton = UIBarButtonItem(title: "RESET", style: .plain, target: self, action: #selector(self.resetButtonAction))
-        let saveButton = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(self.saveButtonAction))
         
+        let saveButton = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(self.saveButtonAction))
+
         self.navigationItem.rightBarButtonItems = [resetButton, saveButton]
+        self.navigationController?.navigationBar.tintColor = .white
         
         self.textView.layer.cornerRadius = 15
         self.textView.layer.masksToBounds = true
         self.textView.layer.borderWidth = 1
-        self.textView.layer.borderColor = UIColor.black.cgColor
+        self.textView.layer.borderColor = UIColor.white.cgColor
+        
+        self.textView.backgroundColor = .backgroundGreen
         self.textView.isEditable = false
+        
         for text in CalcButtonText.allCases {
             self.calcButtonText.append(text.getText())
         }
@@ -49,6 +54,7 @@ class PositionViewController: UIViewController {
                 pv.dataSource = self
                 pv.delegate = self
                 pv.layer.borderWidth = 1
+                pv.layer.borderColor = UIColor.white.cgColor
                 pv.layer.cornerRadius = 15
                 pv.layer.masksToBounds = true
                 if let index = self.calcButtonText.firstIndex(where: { (item) -> Bool in
@@ -128,8 +134,12 @@ extension PositionViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return self.calcButtonText.count
     }
-    
+    /*
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return self.calcButtonText[row]
+    }*/
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        return NSAttributedString(string: self.calcButtonText[row], attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
     }
 }

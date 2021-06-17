@@ -161,7 +161,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRW-ta-P4g">
                                 <rect key="frame" x="20" y="0.0" width="335" height="30"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rFq-9e-qco"/>
                                 </constraints>
@@ -173,7 +172,7 @@
                                     <constraint firstAttribute="height" constant="90" id="798-f9-Mow"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="Ope-I5-wO2"/>
                                 </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textView>
