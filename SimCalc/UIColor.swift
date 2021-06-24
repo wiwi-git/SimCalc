@@ -8,10 +8,12 @@ import UIKit
 
 extension UIColor {
     static var backgroundGreen:UIColor {
-        UIColor(hex: "#58a982ff")!
+//        UIColor(hex: "#58a982ff")!
+        UIColor(named: "yGreen")!
     }
     static var selectedButtonGreen:UIColor {
-        UIColor(hex: "#015401ff")!
+//        UIColor(hex: "#015401ff")!
+        UIColor(named: "selectedButton")!
     }
     /*
     static var backgroundGreen:UIColor {

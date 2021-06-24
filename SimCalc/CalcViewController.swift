@@ -35,14 +35,14 @@ class CalcViewController: UIViewController {
         self.textView.inputView = UIView.init()
         self.textView.textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         self.textView.backgroundColor = .backgroundGreen
-
+        self.textView.textColor = UIColor.white
+        self.textView.font = UIFont.systemFont(ofSize: 21, weight: .semibold)
+        
         self.textView.layer.cornerRadius = 15
         self.textView.layer.masksToBounds = false
         self.textView.layer.borderWidth = 1
         self.textView.layer.borderColor = UIColor.white.cgColor
-//        self.textView.layer.shadowOffset = .zero
-//        self.textView.layer.shadowOpacity = 1
-//        self.textView.layer.shadowRadius = 15
+    
         
         let buttonWidth = (self.line0.bounds.width - ( 3 * 15 )) / 4
         self.buttonSize = CGSize(width: buttonWidth, height: buttonWidth)

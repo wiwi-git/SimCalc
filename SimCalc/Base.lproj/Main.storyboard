@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -60,6 +61,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="yGreen"/>
                         <constraints>
                             <constraint firstItem="FGg-n1-qCe" firstAttribute="top" secondItem="jQ8-bd-nTg" secondAttribute="bottom" id="Jto-34-TMK"/>
                             <constraint firstItem="FGg-n1-qCe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bxT-Oc-wHi"/>
@@ -415,6 +417,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="yGreen">
+            <color red="0.34499999999999997" green="0.66300000000000003" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

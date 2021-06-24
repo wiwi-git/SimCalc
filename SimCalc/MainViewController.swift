@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
 
     var isSideBarShowing = false
     
-    let SLIDE_TIME: Double = 0.3
+    let SLIDE_TIME: Double = 0.2
     let SIDEBAR_WIDTH: CGFloat = 260
     let MAX_HISTORY: Int = 50
     
@@ -172,23 +172,23 @@ class MainViewController: UIViewController {
 }
 extension MainViewController: MenuViewControllerDelegate {
     func openStorage() {
-        self.closeSideBar(animate: false) {
+        self.closeSideBar(animate: true) {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: StorageViewController.sbId)
-            (self.contentVC as? UINavigationController)?.pushViewController(vc!, animated: true)
+            (self.contentVC as? UINavigationController)?.pushViewController(vc!, animated: false)
         }
     }
     
     func openHistory() {
-        self.closeSideBar(animate: false) {
+        self.closeSideBar(animate: true) {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: HistoryViewController.sbId)
-            (self.contentVC as? UINavigationController)?.pushViewController(vc!, animated: true)
+            (self.contentVC as? UINavigationController)?.pushViewController(vc!, animated: false)
         }
     }
     
     func openChangeCalc() {
-        self.closeSideBar(animate: false) {
+        self.closeSideBar(animate: true) {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: PositionViewController.sbId)
-            (self.contentVC as? UINavigationController)?.pushViewController(vc!, animated: true)
+            (self.contentVC as? UINavigationController)?.pushViewController(vc!, animated: false)
         }
     }
 }
