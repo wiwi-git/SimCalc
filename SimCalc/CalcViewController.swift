@@ -50,6 +50,7 @@ class CalcViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("viewWillAppear")
         
         if !self.calc.fetchButtons() {
             _ = self.calc.saveButtons(lines: CalcMode.basicLines)

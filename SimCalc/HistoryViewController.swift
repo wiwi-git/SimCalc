@@ -53,9 +53,9 @@ extension HistoryViewController: UITableViewDelegate,UITableViewDataSource {
         cell.backgroundColor = .clear
         return cell
     }
-    
+ 
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let saveAction = UIContextualAction(style: .normal, title: "보관함으로") { (action, v, complet:@escaping (Bool) -> Void) in
+        let saveAction = UIContextualAction(style: .normal, title: "SAVE") { (action, v, complet:@escaping (Bool) -> Void) in
             
             let alert = UIAlertController(title: "보관함으로", message: "메모를 적어 저장하세요.", preferredStyle: .alert)
             alert.addTextField { (tf) in
@@ -86,38 +86,46 @@ extension HistoryViewController: UITableViewDelegate,UITableViewDataSource {
             alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-        saveAction.backgroundColor = .green
-        return UISwipeActionsConfiguration(actions: [
-                                            saveAction])
+        
+        var saveImage = UIImage(named: "saveImage")
+        saveImage = saveImage?.withTintColor(.white, renderingMode: .alwaysTemplate)
+        saveAction.backgroundColor = UIColor(named: "tableSwipeMenuBackground")
+        saveAction.image = saveImage
+
+        return UISwipeActionsConfiguration(actions: [saveAction])
     }
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        switch editingStyle {
-            case .delete:
-                var toastMessage:String = "삭제에 실패했습니다."
-                var result = false
-                if let item = self.fetchResult?.remove(at: indexPath.row) {
-                    result = HistoryManager.shared.delete(object: item)
+    
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: nil) { (action, v, complet:@escaping (Bool) -> Void) in
+            var toastMessage:String = "삭제에 실패했습니다."
+            var result = false
+            if let item = self.fetchResult?.remove(at: indexPath.row) {
+                result = HistoryManager.shared.delete(object: item)
+            }
+            if result {
+                toastMessage = "SUCCESS"
+                tableView.beginUpdates()
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                tableView.endUpdates()
+            }
+            DispatchQueue.main.async {
+                if let parentVc = self.parent,
+                   let navigation = parentVc as? UINavigationController,
+                   let parentToNavigation = navigation.parent,
+                   let mainVC = parentToNavigation as? MainViewController {
+                    mainVC.showToast(message: toastMessage, time: 3)
                 }
-                if result {
-                    toastMessage = "SUCCESS"
-                    tableView.beginUpdates()
-                    tableView.deleteRows(at: [indexPath], with: .automatic)
-                    tableView.endUpdates()
-                }
-                DispatchQueue.main.async {
-                    if let parentVc = self.parent,
-                       let navigation = parentVc as? UINavigationController,
-                       let parentToNavigation = navigation.parent,
-                       let mainVC = parentToNavigation as? MainViewController {
-                        mainVC.showToast(message: toastMessage, time: 3)
-                    }
-                }
-            default: print("o")
+            }
         }
+        let deleteImage = UIImage(named: "deleteImage")!
+        deleteAction.image = deleteImage.paintOver(with: .red)
+        deleteAction.backgroundColor = UIColor(named: "tableSwipeMenuBackground")
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
+    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }

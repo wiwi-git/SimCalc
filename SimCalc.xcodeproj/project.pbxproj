@@ -25,6 +25,7 @@
 		177D598F267235A300612352 /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D598E267235A300612352 /* HistoryManager.swift */; };
 		177D59922673959E00612352 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D59912673959E00612352 /* Date.swift */; };
 		177EE3A92678D28500B37FB4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EE3A82678D28500B37FB4 /* UIColor.swift */; };
+		17CDDF2B26897E7A00A43CC5 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CDDF2A26897E7A00A43CC5 /* UIImage.swift */; };
 		17E4A5B4265FAA1E0075B132 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */; };
 		17E4A5B726605CF60075B132 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4A5B626605CF60075B132 /* PositionViewController.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		177D598E267235A300612352 /* HistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
 		177D59912673959E00612352 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		177EE3A82678D28500B37FB4 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		17CDDF2A26897E7A00A43CC5 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		17E4A5B626605CF60075B132 /* PositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 				177D598A26720D0900612352 /* HistoryModel.xcdatamodeld */,
 				177D59912673959E00612352 /* Date.swift */,
 				177EE3A82678D28500B37FB4 /* UIColor.swift */,
+				17CDDF2A26897E7A00A43CC5 /* UIImage.swift */,
 			);
 			path = SimCalc;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				170C852A265D1A8E00222777 /* CalcViewController.swift in Sources */,
 				170C8540265D463A00222777 /* CalcButton.swift in Sources */,
 				17764B2426776602008D03BB /* StorageCell.swift in Sources */,
+				17CDDF2B26897E7A00A43CC5 /* UIImage.swift in Sources */,
 				177D59922673959E00612352 /* Date.swift in Sources */,
 				177D59872670B1B000612352 /* HistoryViewController.swift in Sources */,
 				177D598F267235A300612352 /* HistoryManager.swift in Sources */,
