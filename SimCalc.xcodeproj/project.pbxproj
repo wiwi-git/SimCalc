@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170C6E0A268AD47200753DC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 170C6E0C268AD47200753DC1 /* Localizable.strings */; };
 		170C8526265D1A8E00222777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170C8525265D1A8E00222777 /* AppDelegate.swift */; };
 		170C852A265D1A8E00222777 /* CalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170C8529265D1A8E00222777 /* CalcViewController.swift */; };
 		170C852D265D1A8E00222777 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170C852B265D1A8E00222777 /* Main.storyboard */; };
@@ -31,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		170C6DA8268AD12A00753DC1 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		170C6E0B268AD47200753DC1 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		170C6E0E268AD47800753DC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		170C8522265D1A8E00222777 /* SimCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		170C8525265D1A8E00222777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		170C8529265D1A8E00222777 /* CalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				177D59912673959E00612352 /* Date.swift */,
 				177EE3A82678D28500B37FB4 /* UIColor.swift */,
 				17CDDF2A26897E7A00A43CC5 /* UIImage.swift */,
+				170C6E0C268AD47200753DC1 /* Localizable.strings */,
 			);
 			path = SimCalc;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 170C8519265D1A8E00222777;
 			productRefGroup = 170C8523265D1A8E00222777 /* Products */;
@@ -175,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				170C8532265D1A8F00222777 /* LaunchScreen.storyboard in Resources */,
+				170C6E0A268AD47200753DC1 /* Localizable.strings in Resources */,
 				171DB2C6266E118000859F37 /* sidemenu.png in Resources */,
 				170C852F265D1A8F00222777 /* Assets.xcassets in Resources */,
 				17764B21267760B8008D03BB /* StorageCell.xib in Resources */,
@@ -211,6 +218,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		170C6E0C268AD47200753DC1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				170C6E0B268AD47200753DC1 /* ko */,
+				170C6E0E268AD47800753DC1 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		170C852B265D1A8E00222777 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -223,6 +239,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				170C8531265D1A8F00222777 /* Base */,
+				170C6DA8268AD12A00753DC1 /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -234,6 +251,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -295,6 +313,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

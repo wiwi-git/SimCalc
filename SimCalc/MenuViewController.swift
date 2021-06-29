@@ -24,6 +24,12 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var historyButton: UIButton!
     @IBOutlet weak var storageButton: UIButton!
     
+    let menuTitle:[ButtonTag:String] = [
+        .history : "History",
+        .position : "Change Button Layout",
+        .storage : "Storage"
+    ]
+    
     var delegate: MenuViewControllerDelegate?
     var calldVC: CalcViewController?
     
@@ -39,6 +45,7 @@ class MenuViewController: UIViewController {
     func buttonSetting(_ button: UIButton, tag:ButtonTag) {
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        button.setTitle(self.menuTitle[tag], for: .normal)
         button.tag = tag.rawValue
         button.addTarget(self, action: #selector(menuButtonAction(_:)), for: .touchUpInside)
         let lineFrame = CGRect(x: 0, y: button.frame.height - 1, width: button.frame.width, height: 1)

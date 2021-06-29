@@ -116,11 +116,11 @@ class PositionViewController: UIViewController {
         }
         
         if saveFlag, Calc.shared.saveButtons(lines: linesResult) {
-            let alert = UIAlertController(title: "SUCCESS", message: "저장 완료", preferredStyle: .alert)
+            let alert = UIAlertController(title: "SUCCESS", message: "Complete", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         } else {
-            let alert = UIAlertController(title: "ERROR", message: "오류가 있어 저장 할 수 없었습니다.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "ERROR", message: "FAIL", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }

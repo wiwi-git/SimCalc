@@ -19,7 +19,7 @@ class StorageViewController: UIViewController {
     let bar = self.navigationController?.navigationBar
     bar?.tintColor = .white
     bar?.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-    self.navigationItem.title = "저장소"
+    self.navigationItem.title = "Storage"
     
     self.tableview.delegate = self
     self.tableview.dataSource = self
@@ -49,39 +49,40 @@ extension StorageViewController: UITableViewDelegate, UITableViewDataSource {
     tableView.deselectRow(at: indexPath, animated: true)
   }
   
-  func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-    return true
+  func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    let deleteMenu = UIContextualAction(style: .destructive, title: "DELETE") {
+      (action, v, complet:@escaping (Bool) -> Void) in
+      
+      let alert = UIAlertController(title: "DELETE", message: "Are you sure you want to delete it?", preferredStyle: .alert)
+      
+      alert.addAction(UIAlertAction(title: "DELETE", style: .default, handler: { (_) in
+        var result = false
+        if let item = self.fetchResult?.remove(at: indexPath.row) {
+            result = HistoryManager.shared.delete(object: item)
+        }
+        
+        var toastMessage:String = "FAIL"
+        if result {
+          toastMessage = "SUCCESS"
+          self.tableview.beginUpdates()
+          self.tableview.deleteRows(at: [indexPath], with: .automatic)
+          self.tableview.endUpdates()
+        }
+        if let parentVc = self.parent,
+           let navigation = parentVc as? UINavigationController,
+           let parentToNavigation = navigation.parent,
+           let mainVC = parentToNavigation as? MainViewController {
+          mainVC.showToast(message: toastMessage, time: 3)
+        }
+      }))
+      alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+      self.present(alert, animated: true, completion: nil)
+    }
+    deleteMenu.backgroundColor = UIColor(named: "tableSwipeMenuBackground")
+    deleteMenu.image = UIImage(named: "deleteImage")!.paintOver(with: .red)
+    
+    let config = UISwipeActionsConfiguration(actions: [deleteMenu])
+    return config
   }
   
-  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    switch editingStyle {
-      case .delete:
-        let alert = UIAlertController(title: "삭제", message: "정말 지우시겠습니까?", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "삭제", style: .default, handler: { (_) in
-          var result = false
-          if let item = self.fetchResult?.remove(at: indexPath.row) {
-              result = HistoryManager.shared.delete(object: item)
-          }
-          
-          var toastMessage:String = "삭제에 실패했습니다."
-          if result {
-            toastMessage = "SUCCESS"
-            self.tableview.beginUpdates()
-            self.tableview.deleteRows(at: [indexPath], with: .automatic)
-            self.tableview.endUpdates()
-          }
-          if let parentVc = self.parent,
-             let navigation = parentVc as? UINavigationController,
-             let parentToNavigation = navigation.parent,
-             let mainVC = parentToNavigation as? MainViewController {
-            mainVC.showToast(message: toastMessage, time: 3)
-          }
-        }))
-        alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-      case .insert: print("i")
-      default: print("o")
-    }
-  }
 }

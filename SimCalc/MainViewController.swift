@@ -139,36 +139,6 @@ class MainViewController: UIViewController {
             view.removeFromSuperview()
         }
     }
-    
-//    public static func showToast(message : String, _ time:Double = 5.0) {
-//        if let window = UIApplication.shared.keyWindow{
-//
-//            let label = UILabel(frame: CGRect(x: window.screen.bounds.size.width/6 ,y:window.screen.bounds.size.height-100, width: window.screen.bounds.size.width/3 * 2, height: 35))
-//
-//
-//            if User.shared.isOpened_keyboard {
-//                label.frame.origin.y = window.screen.bounds.size.height - 50 - (User.shared.keyboardHeight ?? 0)
-//            }
-//
-//            label.numberOfLines = 0
-//            label.lineBreakMode = .byWordWrapping
-//            label.text = message
-//            let height = label.requiredHeight
-//            label.frame.size.height = height
-//
-//            label.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-//            label.textColor = UIColor.white
-//            label.textAlignment = .center
-//
-//            label.alpha = 1.0
-//            label.clipsToBounds = true
-//            window.addSubview(label)
-//            UIView.animate(withDuration: time, delay: 0.1, options: .curveEaseOut, animations: {label.alpha = 0.0}, completion:{(isCompleted) in label.removeFromSuperview()})
-//        }else{
-//            print("Utils.showToast() rootcontrollaer get fail")
-//
-//        }
-//    }
 }
 extension MainViewController: MenuViewControllerDelegate {
     func openStorage() {
