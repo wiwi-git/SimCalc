@@ -17,7 +17,7 @@ class HistoryViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-        self.navigationItem.title = "History"
+        self.navigationItem.title = "History".localized()
         self.navigationController?.navigationBar.tintColor = .white
         
         let request: NSFetchRequest<History> = History.fetchRequest()
@@ -55,13 +55,13 @@ extension HistoryViewController: UITableViewDelegate,UITableViewDataSource {
     }
  
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let saveAction = UIContextualAction(style: .normal, title: "SAVE") { (action, v, complet:@escaping (Bool) -> Void) in
+        let saveAction = UIContextualAction(style: .normal, title: "SAVE".localized()) { (action, v, complet:@escaping (Bool) -> Void) in
             
-            let alert = UIAlertController(title: "Saved in Storage", message: "Put in Text", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Saved in Storage".localized(), message: "Put in Text".localized(), preferredStyle: .alert)
             alert.addTextField { (tf) in
-                tf.placeholder = "Text"
+                tf.placeholder = "Text".localized()
             }
-            alert.addAction(UIAlertAction(title: "SAVE", style: .default, handler: { (_) in
+            alert.addAction(UIAlertAction(title: "SAVE".localized(), style: .default, handler: { (_) in
                 if let item = self.fetchResult?[indexPath.row],
                    let date = item.date,
                    let log = item.log {
@@ -73,7 +73,7 @@ extension HistoryViewController: UITableViewDelegate,UITableViewDataSource {
                         memo = text
                     }
                     let result = HistoryManager.shared.insertStorage(log: calcLog, memo: memo)
-                    let toastMessage = result ? "SUCCESS" : "FAIL"
+                    let toastMessage = result ? "SUCCESS".localized() : "FAIL".localized()
                     
                     if let parentVc = self.parent,
                        let navigation = parentVc as? UINavigationController,
@@ -83,7 +83,7 @@ extension HistoryViewController: UITableViewDelegate,UITableViewDataSource {
                     }
                 }
             }))
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
         
@@ -97,14 +97,14 @@ extension HistoryViewController: UITableViewDelegate,UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "DELETE") { (action, v, complet:@escaping (Bool) -> Void) in
-            var toastMessage:String = "FAIL"
+        let deleteAction = UIContextualAction(style: .destructive, title: "DELETE".localized()) { (action, v, complet:@escaping (Bool) -> Void) in
+            var toastMessage:String = "FAIL".localized()
             var result = false
             if let item = self.fetchResult?.remove(at: indexPath.row) {
                 result = HistoryManager.shared.delete(object: item)
             }
             if result {
-                toastMessage = "SUCCESS"
+                toastMessage = "SUCCESS".localized()
                 tableView.beginUpdates()
                 tableView.deleteRows(at: [indexPath], with: .automatic)
                 tableView.endUpdates()

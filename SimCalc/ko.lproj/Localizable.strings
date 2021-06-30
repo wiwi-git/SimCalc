@@ -5,3 +5,20 @@
   Created by 위대연 on 2021/06/29.
   Korea
 */
+"OK" = "확인";
+"ERROR" = "ERROR";
+"Invalid calculation formula." = "올바르지 않은 계산식 입니다.";
+"RESET" = "되돌리기";
+"SAVE" = "저장";
+"SUCCESS" = "성공";
+"Complete" = "완료";
+"History" = "기록";
+"Change Button Layout" = "버튼 위치 변경";
+"Storage" = "저장소";
+"Saved in Storage" = "저장소에 저장";
+"Put in Text" = "텍스트를 넣어주세요";
+"Text" = "텍스트";
+"FAIL" = "실패";
+"Cancel" = "취소";
+"DELETE" = "삭제";
+"Are you sure you want to delete it?" = "정말 지우실 건가요?";

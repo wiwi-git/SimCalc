@@ -50,7 +50,6 @@ class CalcViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear")
         
         if !self.calc.fetchButtons() {
             _ = self.calc.saveButtons(lines: CalcMode.basicLines)
@@ -91,7 +90,7 @@ class CalcViewController: UIViewController {
     
     func openAlertView(title:String,text:String) {
         let alt = UIAlertController(title: title, message: text, preferredStyle: .alert)
-        alt.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        alt.addAction(UIAlertAction(title: "OK".localized(), style: .cancel, handler: nil))
         self.present(alt, animated: true, completion: nil)
     }
     
@@ -119,7 +118,7 @@ class CalcViewController: UIViewController {
                             let history = HistoryManager.shared
                             history.insertLog(log: CalcLog(date: Date(), log: self.textView.text ?? ""))
                         } else {
-                            self.openAlertView(title: "ERROR", text: "올바르지 않은 계산식입니다.")
+                            self.openAlertView(title: "ERROR".localized(), text: "Invalid calculation formula.".localized())
                         }
                     }
                 default: self.textView.insertText(sender.title(for: .normal)!)

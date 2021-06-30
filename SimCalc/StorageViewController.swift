@@ -19,7 +19,7 @@ class StorageViewController: UIViewController {
     let bar = self.navigationController?.navigationBar
     bar?.tintColor = .white
     bar?.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-    self.navigationItem.title = "Storage"
+    self.navigationItem.title = "Storage".localized()
     
     self.tableview.delegate = self
     self.tableview.dataSource = self
@@ -50,20 +50,20 @@ extension StorageViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-    let deleteMenu = UIContextualAction(style: .destructive, title: "DELETE") {
+    let deleteMenu = UIContextualAction(style: .destructive, title: "DELETE".localized()) {
       (action, v, complet:@escaping (Bool) -> Void) in
       
-      let alert = UIAlertController(title: "DELETE", message: "Are you sure you want to delete it?", preferredStyle: .alert)
+      let alert = UIAlertController(title: "DELETE".localized(), message: "Are you sure you want to delete it?".localized(), preferredStyle: .alert)
       
-      alert.addAction(UIAlertAction(title: "DELETE", style: .default, handler: { (_) in
+      alert.addAction(UIAlertAction(title: "DELETE".localized(), style: .default, handler: { (_) in
         var result = false
         if let item = self.fetchResult?.remove(at: indexPath.row) {
             result = HistoryManager.shared.delete(object: item)
         }
         
-        var toastMessage:String = "FAIL"
+        var toastMessage:String = "FAIL".localized()
         if result {
-          toastMessage = "SUCCESS"
+          toastMessage = "SUCCESS".localized()
           self.tableview.beginUpdates()
           self.tableview.deleteRows(at: [indexPath], with: .automatic)
           self.tableview.endUpdates()
@@ -75,7 +75,7 @@ extension StorageViewController: UITableViewDelegate, UITableViewDataSource {
           mainVC.showToast(message: toastMessage, time: 3)
         }
       }))
-      alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+      alert.addAction(UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: nil))
       self.present(alert, animated: true, completion: nil)
     }
     deleteMenu.backgroundColor = UIColor(named: "tableSwipeMenuBackground")

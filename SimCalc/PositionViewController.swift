@@ -28,9 +28,9 @@ class PositionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let resetButton = UIBarButtonItem(title: "RESET", style: .plain, target: self, action: #selector(self.resetButtonAction))
+        let resetButton = UIBarButtonItem(title: "RESET".localized(), style: .plain, target: self, action: #selector(self.resetButtonAction))
         
-        let saveButton = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(self.saveButtonAction))
+        let saveButton = UIBarButtonItem(title: "SAVE".localized(), style: .plain, target: self, action: #selector(self.saveButtonAction))
 
         self.navigationItem.rightBarButtonItems = [resetButton, saveButton]
         self.navigationController?.navigationBar.tintColor = .white
@@ -116,12 +116,12 @@ class PositionViewController: UIViewController {
         }
         
         if saveFlag, Calc.shared.saveButtons(lines: linesResult) {
-            let alert = UIAlertController(title: "SUCCESS", message: "Complete", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            let alert = UIAlertController(title: "SUCCESS".localized(), message: "Complete".localized(), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK".localized(), style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         } else {
-            let alert = UIAlertController(title: "ERROR", message: "FAIL", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            let alert = UIAlertController(title: "ERROR".localized(), message: "FAIL", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK".localized(), style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }

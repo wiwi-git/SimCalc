@@ -22,7 +22,6 @@ class MainViewController: UIViewController {
         self.view.backgroundColor = .backgroundGreen
         let history = HistoryManager.shared
         if let count = history.count(request: History.fetchRequest()) {
-            print("history count : \(count)")
             if count > self.MAX_HISTORY {
                 let fetchResult = history.fetch(request: History.fetchRequest())
                 let deleteCount = fetchResult.count - self.MAX_HISTORY
@@ -106,7 +105,6 @@ class MainViewController: UIViewController {
     }
     
     func showToast(message:String, time:Double) {
-        print("Called showToast")
         let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
         let label = UILabel(frame: CGRect(x: 8, y: 8, width: view.frame.width - 16, height: view.frame.height - 16))
         label.textColor = .white

@@ -5,3 +5,20 @@
   Created by 위대연 on 2021/06/29.
   English
 */
+"OK" = "OK";
+"ERROR" = "ERROR";
+"Invalid calculation formula." = "Invalid calculation formula.";
+"RESET" = "RESET";
+"SAVE" = "SAVE";
+"SUCCESS" = "SUCCESS";
+"Complete" = "Complete";
+"History" = "History";
+"Change Button Layout" = "Change Button Layout";
+"Storage" = "Storage";
+"Saved in Storage" = "Saved in Storage";
+"Put in Text" = "Put in Text";
+"Text" = "Text";
+"FAIL" = "FAIL";
+"Cancel" = "Cancel";
+"DELETE" = "DELETE";
+"Are you sure you want to delete it?" = "Are you sure you want to delete it?";

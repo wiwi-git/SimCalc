@@ -25,9 +25,9 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var storageButton: UIButton!
     
     let menuTitle:[ButtonTag:String] = [
-        .history : "History",
-        .position : "Change Button Layout",
-        .storage : "Storage"
+        .history : "History".localized(),
+        .position : "Change Button Layout".localized(),
+        .storage : "Storage".localized()
     ]
     
     var delegate: MenuViewControllerDelegate?

@@ -61,7 +61,6 @@ class Calc {
     }
     
     func saveButtons(lines: [[CalcButtonText]]) -> Bool {
-        print("saveButtons")
         let encode = JSONEncoder()
         do {
             let data = try encode.encode(lines)
@@ -76,7 +75,6 @@ class Calc {
     }
     
     func fetchButtons() -> Bool {
-        print("fetchButtons")
         do {
             if let data = UserDefaults.standard.data(forKey: Calc.saveKey) {
                 let decode = JSONDecoder()

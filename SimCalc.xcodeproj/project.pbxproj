@@ -27,6 +27,7 @@
 		177D59922673959E00612352 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177D59912673959E00612352 /* Date.swift */; };
 		177EE3A92678D28500B37FB4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EE3A82678D28500B37FB4 /* UIColor.swift */; };
 		17CDDF2B26897E7A00A43CC5 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CDDF2A26897E7A00A43CC5 /* UIImage.swift */; };
+		17D6CC4D268C212A00A57517 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D6CC4C268C212A00A57517 /* String.swift */; };
 		17E4A5B4265FAA1E0075B132 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */; };
 		17E4A5B726605CF60075B132 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4A5B626605CF60075B132 /* PositionViewController.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		177D59912673959E00612352 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		177EE3A82678D28500B37FB4 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		17CDDF2A26897E7A00A43CC5 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		17D6CC4C268C212A00A57517 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		17E4A5B3265FAA1E0075B132 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		17E4A5B626605CF60075B132 /* PositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 				177EE3A82678D28500B37FB4 /* UIColor.swift */,
 				17CDDF2A26897E7A00A43CC5 /* UIImage.swift */,
 				170C6E0C268AD47200753DC1 /* Localizable.strings */,
+				17D6CC4C268C212A00A57517 /* String.swift */,
 			);
 			path = SimCalc;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				177D59872670B1B000612352 /* HistoryViewController.swift in Sources */,
 				177D598F267235A300612352 /* HistoryManager.swift in Sources */,
 				17764B1E26775FD3008D03BB /* StorageViewController.swift in Sources */,
+				17D6CC4D268C212A00A57517 /* String.swift in Sources */,
 				170C8526265D1A8E00222777 /* AppDelegate.swift in Sources */,
 				177D59822670481A00612352 /* TryCatch.m in Sources */,
 			);
